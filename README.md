@@ -2,6 +2,8 @@
 
 Independent, non-commercial reference on research peptides: evidence, safety and regulatory status. Pilot draft, unreviewed, not medical advice. No sales, ads or vendor links.
 
+**View the site:** <https://mchugh1122.github.io/research-peptide-monographs/>
+
 ## Status
 
 Draft v0.1. The registry lists 50 candidate peptides. The GLP-1/incretin class (10 peptides) has evidence drafts with DOI-backed references, BPC-157 has a pilot monograph, and the remaining entries have skeleton pages pending evidence. Every claim must be mapped to a DOI before a monograph can advance.
