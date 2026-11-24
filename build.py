@@ -121,9 +121,14 @@ def main():
         data["refs"] = json.loads(refs.read_text(encoding="utf-8")) if refs.exists() else []
         monos[data["id"]] = data
     tpl = (ROOT / "template.html").read_text(encoding="utf-8")
+    changelog_html = ""
+    cl = ROOT / "CHANGELOG.md"
+    if cl.exists():
+        changelog_html = render_blocks(cl.read_text(encoding="utf-8").split("\n"))
     out = (
         tpl.replace("/*__REGISTRY__*/null", json.dumps(reg, ensure_ascii=False))
         .replace("/*__MONOS__*/null", json.dumps(monos, ensure_ascii=False))
+        .replace("/*__CHANGELOG__*/null", json.dumps(changelog_html, ensure_ascii=False))
     )
     (ROOT / "index.html").write_text(out, encoding="utf-8")
     print(f"built index.html: {len(reg)} registry entries, {len(monos)} monograph(s)")

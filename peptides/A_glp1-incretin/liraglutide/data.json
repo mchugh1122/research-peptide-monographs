@@ -9,12 +9,13 @@
  "status": "A",
  "status_note": "Monograph draft, not yet reviewed. Approval status from secondary sources; verify against regulator pages.",
  "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVRGRG",
- "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "sequence_note": "Backbone verified against PubChem CID 16134956 (Lys20 γGlu-palmitoyl side chain not shown).",
  "structure_note": "Backbone shown; Lys20 carries a Glu-palmitoyl (C16) side chain that is not depicted. Atom-level 2D and 3D views are pending support for the modified residue.",
  "pdb": null,
  "verified": "2026-11-24",
  "next_review": null,
  "reviewer": null,
  "version": "0.1 draft",
- "nonstandard": true
+ "nonstandard": true,
+ "smiles": "CCCCCCCCCCCCCCCC(=O)N[C@@H](CCC(=O)NCCCC[C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N[C@@H](C)C(=O)N[C@@H](CC2=CNC3=CC=CC=C32)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)N)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@H](C(C)C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CC5=CC=CC=C5)NC(=O)[C@H]([C@@H](C)O)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](CC6=CN=CN6)N)C(=O)O"
 }

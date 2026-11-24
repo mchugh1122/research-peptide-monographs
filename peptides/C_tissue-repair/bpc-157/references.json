@@ -1,2 +1,29 @@
 [
+ {
+  "doi": "10.1016/0928-4257(93)90038-u",
+  "tier": 5,
+  "claim": "First description of BPC and its 15-residue fragment BPC 157 (stomach-stress-organoprotection hypothesis)."
+ },
+ {
+  "doi": "10.1016/0024-3205(94)00796-9",
+  "tier": 4,
+  "claim": "Gastric and duodenal lesion protection in rats (restraint stress, cysteamine, 96% ethanol); endothelial protection proposed."
+ },
+ {
+  "doi": "10.1007/bf02087908",
+  "tier": 4,
+  "claim": "Gastric lesion protection in rats (restraint stress, ethanol, indomethacin, capsaicin neurotoxicity)."
+ },
+ {
+  "url": "https://www.fda.gov/media/193773/download",
+  "title": "FDA PCAC briefing: BPC-157 (free base) and BPC-157 acetate (July 2026)",
+  "claim": "FDA evaluation: substances not well characterized; immunogenicity concerns for injectable/nasal routes; 28-day animal studies showed coagulopathy and liver safety signals; human data limited to small studies and one UC meeting abstract; FDA proposed against 503A inclusion. Committee voted 8–6 (1 abstention) to recommend inclusion; final FDA action pending.",
+  "note": "regulator document"
+ },
+ {
+  "url": "https://www.fda.gov/media/193342/download",
+  "title": "FDA PCAC meeting briefing package (23–24 July 2026)",
+  "claim": "Meeting materials; also records that WADA lists BPC-157 under non-approved substances (S0).",
+  "note": "regulator document"
+ }
 ]

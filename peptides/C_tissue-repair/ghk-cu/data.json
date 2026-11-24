@@ -8,7 +8,7 @@
  "status": "U",
  "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
  "sequence": "GHK",
- "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "sequence_note": "Verified against PubChem record (formula match)",
  "structure_note": "Gly-His-Lys; the marketed form is a copper(II) complex, and the metal is not depicted in the structure views.",
  "pdb": null,
  "verified": "2026-11-24",

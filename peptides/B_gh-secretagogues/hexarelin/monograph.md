@@ -2,56 +2,58 @@
 
 ## Summary
 
-To be added. Skeleton draft — every claim will require DOI-backed references.
+Growth-hormone secretagogue (His-D-2MeTrp-Ala-Trp-D-Phe-Lys-NH2) with direct cardiac actions in addition to pituitary GH release. Investigated for cardiac indications; no approved product. Sold as a 'research' peptide.
 
 ## Mechanism of action
 
-To be added.
+**Established:** ghrelin-receptor agonism (GH release) plus cardiac effects partly via the CD36 receptor in animal work. The cardiac actions are dose-dependent and include inotropic effects in animal models.
 
 ## Evidence summary
 
-| Tier | Finding |
-| --- | --- |
-| — | Not yet populated. |
+| Tier | Finding | Ref. |
+| --- | --- | --- |
+| 2 | Review of cardiovascular actions | [10.11909/j.issn.1671-5411.2014.03.007](https://doi.org/10.11909/j.issn.1671-5411.2014.03.007) |
 
 ## Indications and dose
 
-To be added. No dosing information is given for unapproved compounds.
+**No licensed indications. No established dose.**
 
 ## Important safety information and cautions
 
-To be added.
+Direct cardiac effects mean arrhythmia and blood-pressure monitoring is relevant if exposure occurs; no human safety database for chronic use.
 
 ## Contraindications
 
-To be added.
+None formally established. Precautionary: significant cardiac disease, pregnancy.
 
 ## Side effects
 
-To be added.
+Per limited studies: hunger, flushing; cardiac effects dose-related.
 
 ## Product quality
 
-To be added from independent analytical studies. Vendor certificates of analysis are never used as evidence.
+Unregulated supply; quality unknown.
 
 ## Handling and storage
 
-To be added.
+Instructions deliberately not given.
 
 ## Regulatory and sport status
 
 | Jurisdiction | Status |
 | --- | --- |
-| — | To be verified against regulator pages. |
+| United States / EU | Not approved. |
+| Sport | GH secretagogues prohibited by WADA; verify. |
 
 ## Notes for clinicians
 
-To be added.
+If use is reported, consider cardiac monitoring given the compound's cardiac actions; report adverse events.
 
 ## Plain-language page
 
-To be added.
+**What is it?** An experimental peptide with growth-hormone and direct heart effects. **What do we know?** Animal and small human studies. **What don't we know?** Long-term safety. **What should I tell my doctor or pharmacist?** That you use it and where it came from.
 
 ## Evidence gaps
 
-- All sections pending DOI-backed sources
+- No large human trials
+- Independent analyses of market supply pending

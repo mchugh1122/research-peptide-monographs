@@ -4,14 +4,15 @@
  "aliases": [],
  "class": "B",
  "status": "U",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": null,
  "sequence_note": null,
- "structure_note": "Pentapeptide with Aib and D-amino acids; sequence to verify. Atom-level display pending.",
+ "structure_note": "Aib-His-D-2Nal-D-Phe-Lys-NH2 (non-standard and D-amino acids). 2D structure shown from the recorded SMILES (PubChem CID 9831659); 3D view pending support.",
  "pdb": null,
  "verified": "2026-11-24",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
- "nonstandard": true
+ "version": "0.1 draft",
+ "nonstandard": true,
+ "smiles": "CC(C)(C(=O)N[C@@H](CC1=CN=CN1)C(=O)N[C@H](CC2=CC3=CC=CC=C3C=C2)C(=O)N[C@H](CC4=CC=CC=C4)C(=O)N[C@@H](CCCCN)C(=O)N)N"
 }

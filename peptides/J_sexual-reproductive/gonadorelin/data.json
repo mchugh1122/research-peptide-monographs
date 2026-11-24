@@ -10,12 +10,13 @@
  "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
  "sequence": null,
  "sequence_note": null,
- "structure_note": "pyroGlu-His-Trp-Ser-Tyr-Gly-Leu-Arg-Pro-Gly-NH2; N-terminal pyroglutamate. Atom-level display pending.",
+ "structure_note": "pyroGlu-His-Trp-Ser-Tyr-Gly-Leu-Arg-Pro-Gly-NH2 (N-terminal pyroglutamate). 2D structure shown from the recorded SMILES (PubChem CID 638793); 3D view pending support.",
  "pdb": null,
  "verified": "2026-11-24",
  "next_review": null,
  "reviewer": null,
  "version": "0.1 skeleton",
  "nonstandard": true,
- "c_term": "amide"
+ "c_term": "amide",
+ "smiles": "CC(C)C[C@@H](C(=O)N[C@@H](CCCN=C(N)N)C(=O)N1CCC[C@H]1C(=O)NCC(=O)N)NC(=O)CNC(=O)[C@H](CC2=CC=C(C=C2)O)NC(=O)[C@H](CO)NC(=O)[C@H](CC3=CNC4=CC=CC=C43)NC(=O)[C@H](CC5=CN=CN5)NC(=O)[C@@H]6CCC(=O)N6"
 }

@@ -4,14 +4,16 @@
  "aliases": [],
  "class": "B",
  "status": "U",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources. Note on FDA serious adverse events pending primary-source verification.",
  "sequence": "YLRIVQCRSVEGSCGF",
- "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
- "structure_note": "Synthetic fragment of hGH(177–191) with an added N-terminal Tyr; to verify whether the Cys6–Cys14 disulfide is present.",
+ "sequence_note": "Verified against PubChem record (formula match) (recorded SMILES contains the disulfide)",
+ "structure_note": "hGH(177–191) fragment with an added N-terminal Tyr. Per the PubChem record (CID 71300630) the peptide carries a Cys6–Cys14 disulfide bridge and a C-terminal free acid. 2D structure shown from the recorded SMILES; 3D view pending support for cyclic modified peptides.",
  "pdb": null,
  "verified": "2026-11-24",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
- "c_term": "amide"
+ "version": "0.1 draft",
+ "smiles": "CC[C@H](C)[C@@H](C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CCC(=O)N)C(=O)N[C@H]1CSSC[C@H](NC(=O)[C@@H](NC(=O)CNC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC1=O)CCCNC(=N)N)CO)C(C)C)CCC(=O)O)CO)C(=O)NCC(=O)N[C@@H](CC2=CC=CC=C2)C(=O)O)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC3=CC=C(C=C3)O)N",
+ "nonstandard": true,
+ "cyclic": true
 }

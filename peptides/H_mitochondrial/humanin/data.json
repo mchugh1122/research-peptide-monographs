@@ -6,7 +6,7 @@
  "status": "U",
  "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
  "sequence": "MAPRGFSCLLLLTSEIDLPVKRRA",
- "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "sequence_note": "Verified against PubChem record (formula match)",
  "structure_note": null,
  "pdb": null,
  "verified": "2026-11-24",

@@ -1,14 +1,18 @@
 {
-  "id": "bpc-157",
-  "name": "BPC-157",
-  "aliases": ["Body Protection Compound 157", "PL-14736"],
-  "class": "C",
-  "status": "U",
-  "status_note": "Pilot draft, not yet reviewed. Not approved for any use. Regulatory flags verified 24 Nov 2026 from secondary sources.",
-  "sequence": "GEPPPGKPADDAGLV",
-  "pdb": null,
-  "verified": "2026-11-24",
-  "next_review": null,
-  "reviewer": null,
-  "version": "0.1 pilot"
+ "id": "bpc-157",
+ "name": "BPC-157",
+ "aliases": [
+  "Body Protection Compound 157",
+  "PL-14736"
+ ],
+ "class": "C",
+ "status": "U",
+ "status_note": "Pilot monograph with DOI-backed references and regulator documents (FDA PCAC, July 2026). Draft, not yet reviewed. Not approved for any use.",
+ "sequence": "GEPPPGKPADDAGLV",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.2 draft",
+ "sequence_note": "Verified against the FDA PCAC briefing (July 2026): H-Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gly-Leu-Val-OH; CAS 137525-51-0; formula C62H98N16O22 (matches the computed value)."
 }

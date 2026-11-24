@@ -4,7 +4,7 @@
  "aliases": [],
  "class": "B",
  "status": "U",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": null,
  "sequence_note": null,
  "structure_note": "GHRH(1–29) analogue with D-Ala2 and, in the DAC form, a maleimidopropionic acid–Lys linker. Sequence to verify; atom-level display pending.",
@@ -12,6 +12,6 @@
  "verified": "2026-11-24",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
+ "version": "0.1 draft",
  "nonstandard": true
 }

@@ -2,56 +2,59 @@
 
 ## Summary
 
-To be added. Skeleton draft — every claim will require DOI-backed references.
+GHRH(1–29) analogue containing D-Ala at position 2, with and without the Drug Affinity Complex (DAC): a maleimidopropionic-acid linker that binds covalently to serum albumin, prolonging half-life to days. Development of the DAC form as a medicine was discontinued; no product is approved. Widely sold as a 'research' peptide.
 
 ## Mechanism of action
 
-To be added.
+**Established:** GHRH-receptor agonism stimulating growth-hormone secretion. The DAC modification extends duration markedly; the non-DAC form behaves more like modified GHRH(1–29).
 
 ## Evidence summary
 
-| Tier | Finding |
-| --- | --- |
-| — | Not yet populated. |
+| Tier | Finding | Ref. |
+| --- | --- | --- |
+| 1 | Prolonged GH and IGF-1 stimulation in healthy adults (phase 1/2) | [10.1210/jc.2005-1536](https://doi.org/10.1210/jc.2005-1536) |
 
 ## Indications and dose
 
-To be added. No dosing information is given for unapproved compounds.
+**No licensed indications. No established dose.** Doses in the 2006 trial were study conditions, not recommendations.
 
 ## Important safety information and cautions
 
-To be added.
+Prolonged GH/IGF-1 elevation carries the class concerns of GH therapy (fluid retention, glucose effects, joint symptoms). Development discontinuation means safety information remains limited to early-phase data. The unregulated market supply adds identity and purity risks.
 
 ## Contraindications
 
-To be added.
+None formally established. Mechanism-inferred precautions: active malignancy, pregnancy.
 
 ## Side effects
 
-To be added.
+Early-phase data: headache, flushing, injection-site reactions; to be updated from primary literature.
 
 ## Product quality
 
-To be added from independent analytical studies. Vendor certificates of analysis are never used as evidence.
+No approved product; market supply is unregulated. Independent analyses to be entered.
 
 ## Handling and storage
 
-To be added.
+Instructions deliberately not given for an unapproved compound.
 
 ## Regulatory and sport status
 
 | Jurisdiction | Status |
 | --- | --- |
-| — | To be verified against regulator pages. |
+| United States | Not approved; development discontinued. |
+| European Union | Not approved. |
+| Sport | GHRH analogues prohibited by WADA (S2); analytical methods published (Drug Test Anal). |
 
 ## Notes for clinicians
 
-To be added.
+Document source, dose and duration; consider IGF-1 measurement; report adverse events.
 
 ## Plain-language page
 
-To be added.
+**What is it?** A long-acting growth-hormone-releasing peptide that never became a medicine. **What do we know?** One early human study showed prolonged hormone elevation. **What don't we know?** Nearly everything about long-term safety. **What should I tell my doctor or pharmacist?** That you use it and where it came from.
 
 ## Evidence gaps
 
-- All sections pending DOI-backed sources
+- Development discontinued; no phase 3 data
+- Independent analyses of market supply pending

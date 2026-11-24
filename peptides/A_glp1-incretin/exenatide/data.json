@@ -9,7 +9,7 @@
  "status": "A",
  "status_note": "Monograph draft, not yet reviewed. Approval status from secondary sources; verify against regulator pages.",
  "sequence": "HGEGTFTSDLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS",
- "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "sequence_note": "Verified against PubChem record (formula match) (formula C184H282N50O60S)",
  "structure_note": null,
  "pdb": null,
  "verified": "2026-11-24",
