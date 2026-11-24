@@ -99,8 +99,8 @@ function strip(q){const s=38,w=q.length*s+20;let o=`<svg viewBox="0 0 ${w} 96" w
 return o+"</svg>"}
 const S=(t,h)=>`<section><h2>${t}</h2>${h}</section>`;
 /* ---------- 3D: ideal backbone from sequence ---------- */
-function pdbOf(seq,mode){
-  const D2R=Math.PI/180, ph=(mode==="helix"?-57.8:-119)*D2R, ps=(mode==="helix"?-47:113)*D2R;
+function pdbOf(seq){
+  const D2R=Math.PI/180, ph=-57.8*D2R, ps=-47*D2R;
   const nerf=(a,b,c,l,th,ch)=>{const e=[c[0]-b[0],c[1]-b[1],c[2]-b[2]],L=Math.hypot(...e);const ex=e[0]/L,ey=e[1]/L,ez=e[2]/L;const ba=[b[0]-a[0],b[1]-a[1],b[2]-a[2]];let n1=[ba[1]*ez-ba[2]*ey,ba[2]*ex-ba[0]*ez,ba[0]*ey-ba[1]*ex];const nl=Math.hypot(...n1)||1;n1=[n1[0]/nl,n1[1]/nl,n1[2]/nl];const c1=Math.cos(ch),s1=Math.sin(ch);const en=[ey*n1[2]-ez*n1[1],ez*n1[0]-ex*n1[2],ex*n1[1]-ey*n1[0]];const n2=[c1*n1[0]+s1*en[0],c1*n1[1]+s1*en[1],c1*n1[2]+s1*en[2]];const w=[n2[1]*ez-n2[2]*ey,n2[2]*ex-n2[0]*ez,n2[0]*ey-n2[1]*ex];const st=Math.sin(th),ct=Math.cos(th);return [c[0]+l*(-ct*ex+st*w[0]),c[1]+l*(-ct*ey+st*w[1]),c[2]+l*(-ct*ez+st*w[2])];};
   const atoms=[];
   const add=(nm,resi,p,el)=>{atoms.push([nm,resi,p,el]);};
@@ -131,9 +131,9 @@ let v3=null,v3mode="helix";
 function ccAtom(a){const one=RV[a.resn]||"X";const k=R[one]?R[one].k:"n";return K3[k]||"#999"}
 async function draw3(M){
   const el=$("#v3d");if(!el)return;
-  if(!v3)v3=$3Dmol.createViewer(el,{backgroundColor:"transparent",antialias:true});
+  if(!v3)v3=$3Dmol.createViewer(el,{backgroundColor:"white",antialias:true});
   v3.removeAllModels();
-  const setBtns=()=>{const bH=$("#bH"),bE=$("#bE"),bS=$("#bS"),bX=$("#bX");if(bH)bH.setAttribute("aria-pressed",String(v3mode==="helix"));if(bE)bE.setAttribute("aria-pressed",String(v3mode==="ext"));if(bS)bS.setAttribute("aria-pressed",String(v3mode==="smiles"));if(bX)bX.setAttribute("aria-pressed",String(v3mode==="exp"));};
+  const setBtns=()=>{const bH=$("#bH"),bS=$("#bS"),bX=$("#bX");if(bH)bH.setAttribute("aria-pressed",String(v3mode==="helix"));if(bS)bS.setAttribute("aria-pressed",String(v3mode==="smiles"));if(bX)bX.setAttribute("aria-pressed",String(v3mode==="exp"));};
   if(v3mode==="smiles"&&M.smiles){
     setBtns();
     $("#v3dCap").innerHTML="Generating a 3D conformation from the recorded SMILES with RDKit (ETKDG embedding)…";
@@ -166,19 +166,16 @@ async function draw3(M){
       $("#v3dCap").innerHTML=`Could not load PDB entry ${M.pdb} (network or browser restrictions). <a href="https://www.rcsb.org/structure/${M.pdb}" rel="noopener">Open on RCSB</a>.`;
       v3mode="helix";setBtns();
       if(M.sequence&&!M.nonstandard){
-        try{v3.addModel(pdbOf(M.sequence,"helix"),"pdb");v3.setStyle({}, {cartoon:{colorfunc:ccAtom}});v3.addStyle({atom:"CB"},{stick:{radius:0.2,colorfunc:ccAtom}});v3.zoomTo();v3.render();$("#v3dCap").innerHTML+=" Showing the locally generated schematic instead.";}catch(_){}
+        try{v3.addModel(pdbOf(M.sequence),"pdb");v3.setStyle({}, {cartoon:{colorfunc:ccAtom}});v3.addStyle({atom:"CB"},{stick:{radius:0.2,colorfunc:ccAtom}});v3.zoomTo();v3.render();$("#v3dCap").innerHTML+=" Showing the locally generated schematic instead.";}catch(_){}
       }else $("#v3dCap").innerHTML+=" No locally generated schematic is available for this modified or cyclic peptide.";
     }
     return;
   }
-  v3.addModel(pdbOf(M.sequence,v3mode),"pdb");
+  v3.addModel(pdbOf(M.sequence),"pdb");
   v3.setStyle({}, {cartoon:{colorfunc:ccAtom}});
   v3.addStyle({atom:"CB"},{stick:{radius:0.2,colorfunc:ccAtom}});
   v3.zoomTo();v3.render();
-  const base=v3mode==="helix"
-    ?"Schematic model generated locally from the sequence (ideal α-helix φ = −57.8°, ψ = −47.0°). Not an experimental structure. Side chains are shown as Cβ stubs."
-    :"Schematic model generated locally from the sequence (ideal β-strand φ = −119°, ψ = +113°). Not an experimental structure. Side chains are shown as Cβ stubs.";
-  $("#v3dCap").innerHTML=base+(M.nonstandard?" Backbone only: modified residues and termini are not shown.":"");
+  $("#v3dCap").innerHTML="Schematic model generated locally from the sequence (ideal α-helix φ = −57.8°, ψ = −47.0°). Not an experimental structure. Side chains are shown as Cβ stubs."+(M.nonstandard?" Backbone only: modified residues and termini are not shown.":"");
   setBtns();
 }
 /* ---------- 2D: atom-level structure via RDKit (WASM, offline) ---------- */
@@ -249,7 +246,7 @@ function structureSection(M){
 <p class="n" id="v2dCap"></p>`;
   if(M.pdb||can3D||showSmiles3||showChain)h+=`<h3 style="margin-top:1.4rem">3D view</h3>
 <div class="v3d" id="v3d"></div>
-<div class="bar">${showChain?`<button id="bH" aria-pressed="true">Helix</button><button id="bE" aria-pressed="false">Extended</button>`:""}${showSmiles3?`<button id="bS" aria-pressed="false">RDKit 3D</button>`:""}${M.pdb?`<button id="bX" aria-pressed="false">Experimental (${esc(M.pdb)})</button>`:""}</div>
+<div class="bar">${showChain?`<button id="bH" aria-pressed="true">Helix</button>`:""}${showSmiles3?`<button id="bS" aria-pressed="false">RDKit 3D</button>`:""}${M.pdb?`<button id="bX" aria-pressed="false">Experimental (${esc(M.pdb)})</button>`:""}</div>
 <p class="n" id="v3dCap"></p>${can3D?`
 <p class="n">The diagrams and figures are generated from the sequence field, so every monograph is built the same way and can be checked.</p>`:""}`;
   return h;
@@ -270,9 +267,8 @@ function mono(id){
   for(const s of M.sections){if(!ins&&/^summary/i.test(s.t)){h+=S(s.t,s.h)+S("Structure and composition",structureSection(M));ins=true}else h+=S(s.t,s.h)}
   if(!ins)h=S("Structure and composition",structureSection(M))+h;
   app.innerHTML+=h+refsSection(M)+`<p class="n">${M.reviewer?`Reviewer: ${esc(M.reviewer)} · `:""}Last verified ${esc(M.verified||"not set")} · Next review due: ${esc(M.next_review||"not set")} · Version ${esc(M.version||"draft")}</p>`;
-  const bH=$("#bH"),bE=$("#bE"),bS=$("#bS"),bX=$("#bX");
+  const bH=$("#bH"),bS=$("#bS"),bX=$("#bX");
   if(bH)bH.onclick=()=>{v3mode="helix";draw3(M)};
-  if(bE)bE.onclick=()=>{v3mode="ext";draw3(M)};
   if(bS)bS.onclick=()=>{v3mode="smiles";draw3(M)};
   if(bX)bX.onclick=()=>{v3mode="exp";draw3(M)};
   if(M.sequence&&!M.cyclic)draw3(M);
