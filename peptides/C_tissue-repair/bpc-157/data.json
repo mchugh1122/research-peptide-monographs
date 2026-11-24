@@ -1,0 +1,14 @@
+{
+  "id": "bpc-157",
+  "name": "BPC-157",
+  "aliases": ["Body Protection Compound 157", "PL-14736"],
+  "class": "C",
+  "status": "U",
+  "status_note": "Pilot draft, not yet reviewed. Not approved for any use. Regulatory flags verified 24 Nov 2026 from secondary sources.",
+  "sequence": "GEPPPGKPADDAGLV",
+  "pdb": null,
+  "verified": "2026-11-24",
+  "next_review": null,
+  "reviewer": null,
+  "version": "0.1 pilot"
+}

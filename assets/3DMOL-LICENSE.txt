@@ -1,0 +1,11 @@
+3Dmol.js — https://3dmol.csb.pitt.edu/
+Copyright (c) 2014-2023, Nicholas Rego and David Koes
+3Dmol.js is distributed under the BSD 3-Clause License:
+https://github.com/3dmol/3Dmol.js/blob/master/LICENSE
+Vendored unmodified (minified build) so the site works offline.
+
+RDKit.js (MinimalLib) — https://github.com/rdkit/rdkit / https://rdkitjs.com
+RDKit is distributed under the BSD 3-Clause License:
+https://github.com/rdkit/rdkit/blob/master/license.txt
+Files RDKit_minimal.js and RDKit_minimal.wasm vendored unmodified (release 2026.9.2)
+so the site works offline. RDKit is (c) Greg Landrum and the RDKit development team.
