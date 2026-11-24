@@ -234,6 +234,7 @@ async function draw2D(M){
 /* ---------- monograph page ---------- */
 function structureSection(M){
   const hasSeq=!!M.sequence, can2D=!!M.smiles||(hasSeq&&!M.nonstandard), can3D=hasSeq&&!M.nonstandard;
+  const showChain=hasSeq&&!M.cyclic, showSmiles3=M.smiles&&!showChain;
   if(!hasSeq&&!can2D)return `<div class="box i"><p><strong>No single defined sequence.</strong> ${M.structure_note?esc(M.structure_note):"This entry is a mixture, combination product or extract, so structure display does not apply."}</p></div>`;
   let h="";
   if(hasSeq){
@@ -246,9 +247,9 @@ function structureSection(M){
   if(can2D)h+=`<h3 style="margin-top:1.4rem">2D structure</h3>
 <div class="sc v2dbox" id="v2d"></div>
 <p class="n" id="v2dCap"></p>`;
-  if(M.pdb||can3D||M.smiles||(M.sequence&&!M.cyclic))h+=`<h3 style="margin-top:1.4rem">3D view</h3>
+  if(M.pdb||can3D||showSmiles3||showChain)h+=`<h3 style="margin-top:1.4rem">3D view</h3>
 <div class="v3d" id="v3d"></div>
-<div class="bar">${(can3D||(M.sequence&&!M.cyclic))?`<button id="bH" aria-pressed="true">Helix</button><button id="bE" aria-pressed="false">Extended</button>`:""}${M.smiles?`<button id="bS" aria-pressed="false">RDKit 3D</button>`:""}${M.pdb?`<button id="bX" aria-pressed="false">Experimental (${esc(M.pdb)})</button>`:""}</div>
+<div class="bar">${showChain?`<button id="bH" aria-pressed="true">Helix</button><button id="bE" aria-pressed="false">Extended</button>`:""}${showSmiles3?`<button id="bS" aria-pressed="false">RDKit 3D</button>`:""}${M.pdb?`<button id="bX" aria-pressed="false">Experimental (${esc(M.pdb)})</button>`:""}</div>
 <p class="n" id="v3dCap"></p>${can3D?`
 <p class="n">The diagrams and figures are generated from the sequence field, so every monograph is built the same way and can be checked.</p>`:""}`;
   return h;
@@ -274,9 +275,8 @@ function mono(id){
   if(bE)bE.onclick=()=>{v3mode="ext";draw3(M)};
   if(bS)bS.onclick=()=>{v3mode="smiles";draw3(M)};
   if(bX)bX.onclick=()=>{v3mode="exp";draw3(M)};
-  if(M.sequence&&!M.nonstandard)draw3(M);
+  if(M.sequence&&!M.cyclic)draw3(M);
   else if(M.smiles){v3mode="smiles";draw3(M)}
-  else if(M.sequence&&!M.cyclic)draw3(M);
   else if(M.pdb){v3mode="exp";draw3(M)}
   if(M.smiles||(M.sequence&&!M.nonstandard))draw2D(M);
 }
