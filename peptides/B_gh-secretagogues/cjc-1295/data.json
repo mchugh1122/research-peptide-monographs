@@ -1,0 +1,17 @@
+{
+ "id": "cjc-1295",
+ "name": "CJC-1295",
+ "aliases": [],
+ "class": "B",
+ "status": "U",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "GHRH(1–29) analogue with D-Ala2 and, in the DAC form, a maleimidopropionic acid–Lys linker. Sequence to verify; atom-level display pending.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton",
+ "nonstandard": true
+}

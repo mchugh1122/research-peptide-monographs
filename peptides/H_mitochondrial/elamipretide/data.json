@@ -1,0 +1,20 @@
+{
+ "id": "elamipretide",
+ "name": "Elamipretide (SS-31)",
+ "aliases": [
+  "Bendavia",
+  "MTP-131"
+ ],
+ "class": "H",
+ "status": "A",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "D-Arg-Dmt-Lys-Phe-NH2 with 2′,6′-dimethyltyrosine (Dmt) and D-amino acids; C-terminal amide. Atom-level display pending.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton",
+ "nonstandard": true
+}

@@ -1,0 +1,16 @@
+{
+ "id": "cerebrolysin",
+ "name": "Cerebrolysin",
+ "aliases": [],
+ "class": "E",
+ "status": "A",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "Standardised mixture of porcine brain-derived peptides; no single sequence.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton"
+}

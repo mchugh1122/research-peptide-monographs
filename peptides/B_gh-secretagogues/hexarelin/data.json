@@ -1,0 +1,17 @@
+{
+ "id": "hexarelin",
+ "name": "Hexarelin",
+ "aliases": [],
+ "class": "B",
+ "status": "U",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "His-D-2MeTrp-Ala-Trp-D-Phe-Lys-NH2 (D-amino acids, 2-methyltryptophan); sequence to verify. Atom-level display pending.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton",
+ "nonstandard": true
+}

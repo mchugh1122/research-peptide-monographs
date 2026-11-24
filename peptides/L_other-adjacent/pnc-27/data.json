@@ -1,0 +1,17 @@
+{
+ "id": "pnc-27",
+ "name": "PNC-27",
+ "aliases": [],
+ "class": "L",
+ "status": "U",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "p53-derived membrane-active peptide; sequence to verify. Atom-level display pending.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton",
+ "nonstandard": true
+}

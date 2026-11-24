@@ -1,0 +1,20 @@
+{
+ "id": "exenatide",
+ "name": "Exenatide",
+ "aliases": [
+  "Byetta",
+  "Bydureon"
+ ],
+ "class": "A",
+ "status": "A",
+ "status_note": "Monograph draft, not yet reviewed. Approval status from secondary sources; verify against regulator pages.",
+ "sequence": "HGEGTFTSDLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS",
+ "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "structure_note": null,
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 draft",
+ "c_term": "amide"
+}

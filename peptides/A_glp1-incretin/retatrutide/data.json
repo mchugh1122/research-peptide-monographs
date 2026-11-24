@@ -1,0 +1,17 @@
+{
+ "id": "retatrutide",
+ "name": "Retatrutide",
+ "aliases": [],
+ "class": "A",
+ "status": "I",
+ "status_note": "Monograph draft, not yet reviewed. Investigational status verified from secondary sources. Not approved anywhere.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "GIP/GLP-1/glucagon triagonist with Aib and a modified Lys carrying a fatty diacid. Sequence to verify; atom-level display pending.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 draft",
+ "nonstandard": true
+}

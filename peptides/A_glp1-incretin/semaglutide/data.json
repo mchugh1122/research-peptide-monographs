@@ -1,0 +1,21 @@
+{
+ "id": "semaglutide",
+ "name": "Semaglutide",
+ "aliases": [
+  "Ozempic",
+  "Wegovy",
+  "Rybelsus"
+ ],
+ "class": "A",
+ "status": "A",
+ "status_note": "Monograph draft, not yet reviewed. Approval status from secondary sources; verify against regulator pages.",
+ "sequence": "XEGTFTSDVSSYLEGQAAKEFIAWLVRGRG",
+ "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "structure_note": "Modified GLP-1 analogue: Aib at position 2; Lys20 conjugated to a C18 fatty diacid via a Glu-2×OEG spacer. Atom-level 2D and 3D views are pending support for non-standard residues.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 draft",
+ "nonstandard": true
+}

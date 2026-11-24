@@ -1,0 +1,19 @@
+{
+ "id": "ecnoglutide",
+ "name": "Ecnoglutide",
+ "aliases": [
+  "XW003"
+ ],
+ "class": "A",
+ "status": "A",
+ "status_note": "Monograph draft, not yet reviewed. Approved in China only; verify against NMPA pages.",
+ "sequence": "XEGTFTSDVSSYLEGQAAKEFIAWLVRGRG",
+ "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "structure_note": "GLP-1 analogue similar to semaglutide; backbone from secondary sources, to verify. Modified Lys carries a fatty diacid; atom-level display pending.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 draft",
+ "nonstandard": true
+}

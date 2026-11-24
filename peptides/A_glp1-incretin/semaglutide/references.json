@@ -1,0 +1,17 @@
+[
+ {
+  "doi": "10.1056/NEJMoa2032183",
+  "tier": 1,
+  "claim": "STEP 1: once-weekly semaglutide 2.4 mg for 68 weeks reduced body weight by a mean of 14.9% vs 2.4% with placebo in adults with overweight or obesity (N=1961)."
+ },
+ {
+  "doi": "10.1056/NEJMoa1607141",
+  "tier": 1,
+  "claim": "SUSTAIN-6: in type 2 diabetes at high cardiovascular risk, MACE occurred in 6.6% (semaglutide) vs 8.9% (placebo); HR 0.74 (95% CI 0.58–0.95)."
+ },
+ {
+  "doi": "10.1056/NEJMoa2307563",
+  "tier": 1,
+  "claim": "SELECT: in overweight/obesity with cardiovascular disease and no diabetes, MACE in 6.5% vs 8.0%; HR 0.80 (95% CI 0.72–0.90) over a mean 39.8 months."
+ }
+]

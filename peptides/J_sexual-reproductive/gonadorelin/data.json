@@ -1,0 +1,21 @@
+{
+ "id": "gonadorelin",
+ "name": "Gonadorelin",
+ "aliases": [
+  "GnRH",
+  "Factrel"
+ ],
+ "class": "J",
+ "status": "A",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "pyroGlu-His-Trp-Ser-Tyr-Gly-Leu-Arg-Pro-Gly-NH2; N-terminal pyroglutamate. Atom-level display pending.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton",
+ "nonstandard": true,
+ "c_term": "amide"
+}

@@ -73,7 +73,7 @@ footer{margin-top:3rem;padding:1.5rem 0 1.2rem;border-top:3px double var(--line)
 <script>
 const $=s=>document.querySelector(s),app=$("#app");
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const R={};"G,Gly,57.0519,s;A,Ala,71.0788,n;V,Val,99.1326,n;L,Leu,113.1594,n;I,Ile,113.1594,n;P,Pro,97.1167,s;F,Phe,147.1766,n;W,Trp,186.2132,n;M,Met,131.1926,n;S,Ser,87.0782,p;T,Thr,101.1051,p;C,Cys,103.1388,p;Y,Tyr,163.176,p;H,His,137.1411,b;D,Asp,115.0886,a;E,Glu,129.1155,a;N,Asn,114.1038,p;Q,Gln,128.1307,p;K,Lys,128.1741,b;R,Arg,156.1875,b".split(";").forEach(x=>{const[a,t,m,k]=x.split(",");R[a]={t,m:+m,k}});
+const R={};"G,Gly,57.0519,s;A,Ala,71.0788,n;V,Val,99.1326,n;L,Leu,113.1594,n;I,Ile,113.1594,n;P,Pro,97.1167,s;F,Phe,147.1766,n;W,Trp,186.2132,n;M,Met,131.1926,n;S,Ser,87.0782,p;T,Thr,101.1051,p;C,Cys,103.1388,p;Y,Tyr,163.176,p;H,His,137.1411,b;D,Asp,115.0886,a;E,Glu,129.1155,a;N,Asn,114.1038,p;Q,Gln,128.1307,p;K,Lys,128.1741,b;R,Arg,156.1875,b;X,Aib,85.0528,n".split(";").forEach(x=>{const[a,t,m,k]=x.split(",");R[a]={t,m:+m,k}});
 const AA3={G:"GLY",A:"ALA",V:"VAL",L:"LEU",I:"ILE",P:"PRO",F:"PHE",W:"TRP",M:"MET",S:"SER",T:"THR",C:"CYS",Y:"TYR",H:"HIS",D:"ASP",E:"GLU",N:"ASN",Q:"GLN",K:"LYS",R:"ARG"};
 const RV={};for(const c in AA3)RV[AA3[c]]=c;
 const KN={n:"Nonpolar",p:"Polar",a:"Acidic",b:"Basic",s:"Special"},KC={n:"--np",p:"--po",a:"--ad",b:"--bs",s:"--sp"};
@@ -87,7 +87,7 @@ const bd=s=>`<span class="b ${s}">${ST[s]}</span>`;
 let F={q:"",s:""};
 function list(){const q=F.q.toLowerCase();let o="";for(const k in CH){const r=D.filter(x=>x.class==k&&(!F.s||x.status==F.s)&&(x.name+" "+x.note).toLowerCase().includes(q));if(!r.length)continue;o+=`<h3>${k}. ${CH[k]}</h3>`+r.map(x=>`<div class="r"><div>${N2[x.name.toLowerCase()]?`<a href="#${N2[x.name.toLowerCase()]}">${esc(x.name)}</a>`:esc(x.name)}<div class="n">${esc(x.note)}</div></div>${bd(x.status)}</div>`).join("")}
 $("#list").innerHTML=o||"<p>No entries match. Clear the search or choose All.</p>"}
-function index(){app.innerHTML=`<p class="lead">Candidate peptides grouped by pharmacological class. Status labels are a draft triage from secondary sources and must be verified against regulator, registry and FDA pages before a monograph is published. One pilot monograph exists so far.</p><div class="bar"><input id="q" type="search" placeholder="Search by name or note" aria-label="Search peptides"><div id="chips">${[["","All"],...Object.entries(ST)].map(([k,v])=>`<button data-s="${k}" aria-pressed="${F.s==k}">${v}</button>`).join("")}</div></div><div id="list"></div>`;
+function index(){app.innerHTML=`<p class="lead">Candidate peptides grouped by pharmacological class. Status labels are a draft triage from secondary sources and must be verified against regulator, registry and FDA pages before a monograph is published. ${Object.keys(MONOS).length} monograph draft(s) exist so far; the rest are registry entries pending content.</p><div class="bar"><input id="q" type="search" placeholder="Search by name or note" aria-label="Search peptides"><div id="chips">${[["","All"],...Object.entries(ST)].map(([k,v])=>`<button data-s="${k}" aria-pressed="${F.s==k}">${v}</button>`).join("")}</div></div><div id="list"></div>`;
 $("#q").value=F.q;$("#q").oninput=e=>{F.q=e.target.value;list()};
 $("#chips").onclick=e=>{const b=e.target.closest("button");if(!b)return;F.s=b.dataset.s;[...$("#chips").children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.s==F.s));list()};list()}
 function strip(q){const s=38,w=q.length*s+20;let o=`<svg viewBox="0 0 ${w} 96" width="${w}" height="96" role="img" aria-label="Residue strip from N to C terminus: ${[...q].map(c=>R[c].t).join("-")}"><text x="6" y="12" font-size="11" fill="var(--mut)">N-terminus</text><text x="${w-6}" y="12" font-size="11" text-anchor="end" fill="var(--mut)">C-terminus</text>`;
@@ -158,14 +158,16 @@ async function draw3(M){
 }
 /* ---------- 2D: atom-level structure via RDKit (WASM, offline) ---------- */
 const SC={A:"C",V:"C(C)C",L:"CC(C)C",I:"C(CC)C",S:"CO",T:"C(O)C",C:"CS",M:"CCSC",N:"CC(N)=O",Q:"CCC(N)=O",D:"CC(O)=O",E:"CCC(O)=O",K:"CCCCN",R:"CCCN=C(N)N",H:"CC1=CNC=N1",F:"CC1=CC=CC=C1",Y:"CC1=CC=C(O)C=C1",W:"CC1=CNC2=CC=CC=C12"};
-function smilesOf(seq){
+function smilesOf(seq,cterm){
   let s="";
   [...seq].forEach(c=>{
     if(c==="G")s+="NCC(=O)";
     else if(c==="P")s+="N1[C@@H](CCC1)C(=O)";
     else s+=`N[C@@H](${SC[c]})C(=O)`;
   });
-  return s.replace(/C\(=O\)$/,"C(=O)O");
+  s=s.replace(/C\(=O\)$/,"C(=O)O");
+  if(cterm==="amide")s=s.replace(/C\(=O\)O$/,"C(=O)N");
+  return s;
 }
 let RDK=null,RDKp=null;
 function rdkit(){
@@ -184,7 +186,7 @@ async function draw2D(M){
   box.innerHTML=`<p class="n" style="padding:.8rem 1rem">Drawing structure with RDKit…</p>`;
   try{
     const R=await rdkit();
-    const smi=smilesOf(M.sequence);
+    const smi=smilesOf(M.sequence,M.c_term);
     const mol=R.get_mol(smi);
     if(!mol)throw new Error("could not parse the generated SMILES");
     const heavy=mol.get_num_atoms(true);
@@ -206,11 +208,13 @@ async function draw2D(M){
 }
 /* ---------- monograph page ---------- */
 function structureSection(M){
+  if(!M.sequence)return `<div class="box i"><p><strong>No single defined sequence.</strong> ${M.structure_note?esc(M.structure_note):"This entry is a mixture, combination product or extract, so structure display does not apply."}</p></div>`;
   const q=M.sequence,L=[...q],c={};L.forEach(x=>c[R[x].k]=(c[R[x].k]||0)+1);
   const mass=L.reduce((a,x)=>a+R[x].m,18.0153).toFixed(2),ch=L.reduce((a,x)=>a+("KR".includes(x)?1:"DE".includes(x)?-1:0),0),ks=Object.keys(KN).filter(k=>c[k]);
-  return `<div class="sc">${strip(q)}</div><div class="cb" role="img" aria-label="Composition by residue class">${ks.map(k=>`<i style="width:${c[k]/L.length*100}%;background:var(${KC[k]})"></i>`).join("")}</div><div class="lg">${ks.map(k=>`<span><b class="sw" style="background:var(${KC[k]})"></b>${KN[k]}: ${c[k]}</span>`).join("")}</div>
-<dl style="margin-top:1rem"><dt>Sequence</dt><dd>${q} (${L.map(x=>R[x].t).join("-")})</dd>${M.aliases&&M.aliases.length?`<dt>Aliases</dt><dd>${M.aliases.map(esc).join("; ")}</dd>`:""}<dt>Length</dt><dd>${L.length} residues, linear, unmodified</dd><dt>Average mass</dt><dd>${mass} Da (computed in this page from the sequence)</dd><dt>Net charge</dt><dd>${ch<0?"−"+(-ch):ch} at pH 7 from side chains (approximate; termini cancel)</dd></dl>
-<h3 style="margin-top:1.4rem">2D structure</h3>
+  let h=`<div class="sc">${strip(q)}</div><div class="cb" role="img" aria-label="Composition by residue class">${ks.map(k=>`<i style="width:${c[k]/L.length*100}%;background:var(${KC[k]})"></i>`).join("")}</div><div class="lg">${ks.map(k=>`<span><b class="sw" style="background:var(${KC[k]})"></b>${KN[k]}: ${c[k]}</span>`).join("")}${q.includes("X")?`<span><b class="sw" style="background:var(--np)"></b>X = Aib (α-aminoisobutyric acid)</span>`:""}</div>
+<dl style="margin-top:1rem"><dt>Sequence</dt><dd>${q} (${L.map(x=>R[x].t).join("-")})${M.sequence_note?` <span class="n">— ${esc(M.sequence_note)}</span>`:""}</dd>${M.aliases&&M.aliases.length?`<dt>Aliases</dt><dd>${M.aliases.map(esc).join("; ")}</dd>`:""}<dt>Length</dt><dd>${L.length} residues, ${M.cyclic?"cyclic":"linear"}${M.c_term==="amide"?"; C-terminal amide":""}</dd><dt>Average mass</dt><dd>${mass} Da (computed in this page from the sequence)</dd><dt>Net charge</dt><dd>${ch<0?"−"+(-ch):ch} at pH 7 from side chains (approximate; termini cancel)</dd></dl>`;
+  if(M.nonstandard)h+=`<div class="box i" style="margin-top:1rem"><p>${M.structure_note?esc(M.structure_note):"This peptide contains non-standard or modified residues; atom-level 2D and 3D views are not yet supported."}</p></div>`;
+  else h+=`<h3 style="margin-top:1.4rem">2D structure</h3>
 <div class="sc v2dbox" id="v2d"></div>
 <p class="n" id="v2dCap"></p>
 <h3 style="margin-top:1.4rem">3D view</h3>
@@ -218,6 +222,7 @@ function structureSection(M){
 <div class="bar"><button id="bH" aria-pressed="true">Helix</button><button id="bE" aria-pressed="false">Extended</button>${M.pdb?`<button id="bX" aria-pressed="false">Experimental (${esc(M.pdb)})</button>`:""}</div>
 <p class="n" id="v3dCap"></p>
 <p class="n">The diagrams and figures are generated from the sequence field, so every monograph is built the same way and can be checked.</p>`;
+  return h;
 }
 function refsSection(M){
   const rs=M.refs||[];
@@ -237,8 +242,7 @@ function mono(id){
   if(bH)bH.onclick=()=>{v3mode="helix";draw3(M)};
   if(bE)bE.onclick=()=>{v3mode="ext";draw3(M)};
   if(bX)bX.onclick=()=>{v3mode="exp";draw3(M)};
-  draw3(M);
-  draw2D(M);
+  if(M.sequence&&!M.nonstandard){draw3(M);draw2D(M)}
 }
 function standards(){app.innerHTML=S("Evidence tiers",`<ul><li><strong>Tier 1:</strong> regulatory approval with a label, or two or more good human RCTs or a meta-analysis</li><li><strong>Tier 2:</strong> a single RCT, a large controlled human study, or pivotal regulatory data</li><li><strong>Tier 3:</strong> small or uncontrolled human studies, observational data, case reports</li><li><strong>Tier 4:</strong> in vivo animal studies</li><li><strong>Tier 5:</strong> in vitro, in silico or mechanistic only</li><li><strong>Tier 0:</strong> unverifiable (abstracts, trade claims, vendor material); recorded, never used to support a claim</li></ul>`)+S("Source rules","<p><strong>Allowed:</strong> peer-reviewed literature, trial registries, regulators, pharmacopoeias, WADA, independent analytical studies, systematic reviews.<br><strong>Not allowed as evidence:</strong> vendor sites and press releases, forums, social media, unverified certificates of analysis.</p>")+S("Dose and storage policy","<p>Approved drugs follow the label. For unapproved compounds the repository states that there is no established dose, tabulates doses used in published studies as study conditions, and gives no ‘typical user’ doses, cycling or stacking schedules, or reconstitution and injection instructions.</p>")+S("Pledges","<ul><li>No peptides, products, vendors or affiliate links</li><li>No advertising or sponsorship</li><li>Every claim sourced and dated; gaps stated plainly</li><li>Corrections published in a public changelog</li></ul>")}
 function discussion(){app.innerHTML=S("Discussion",`<div class="box i"><p><strong>Not open yet.</strong> Discussion will open after moderation rules and legal review are in place.</p></div><p>Planned rules:</p><ul><li>Community posts are labelled anecdotal and kept apart from monograph text</li><li>No vendor names, links, discount codes or ‘where do you get yours’ threads, including indirect forms</li><li>Experience reports use structured fields and prompt an official adverse-event report</li><li>Verified-clinician flair and an optional clinician-only space</li><li>Only evidence meeting the rubric changes a monograph</li></ul>`)}

@@ -1,0 +1,19 @@
+{
+ "id": "p21",
+ "name": "P21",
+ "aliases": [
+  "CNTF peptide 21"
+ ],
+ "class": "E",
+ "status": "U",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "Acetylated CNTF-derived peptide; sequence to verify. Atom-level display pending.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton",
+ "nonstandard": true
+}

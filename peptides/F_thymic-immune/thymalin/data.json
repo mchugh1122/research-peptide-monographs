@@ -1,0 +1,16 @@
+{
+ "id": "thymalin",
+ "name": "Thymalin",
+ "aliases": [],
+ "class": "F",
+ "status": "U",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "Thymus extract preparation; no single defined sequence.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton"
+}

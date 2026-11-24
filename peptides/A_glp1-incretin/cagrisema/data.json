@@ -1,0 +1,16 @@
+{
+ "id": "cagrisema",
+ "name": "CagriSema",
+ "aliases": [],
+ "class": "A",
+ "status": "I",
+ "status_note": "Monograph draft, not yet reviewed. Under regulatory review; not yet approved.",
+ "sequence": null,
+ "sequence_note": null,
+ "structure_note": "Fixed-dose combination of cagrilintide and semaglutide; no single sequence.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 draft"
+}

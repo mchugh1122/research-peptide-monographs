@@ -1,0 +1,19 @@
+{
+ "id": "thymosin-alpha-1",
+ "name": "Thymosin alpha-1",
+ "aliases": [
+  "Zadaxin"
+ ],
+ "class": "F",
+ "status": "A",
+ "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "sequence": "SDAAVDTSSEITTKDLKEKKEVVEEAEN",
+ "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "structure_note": "N-terminally acetylated (not depicted); sequence to verify.",
+ "pdb": null,
+ "verified": "2026-11-24",
+ "next_review": null,
+ "reviewer": null,
+ "version": "0.1 skeleton",
+ "nonstandard": true
+}
