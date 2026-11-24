@@ -2,6 +2,7 @@
 
 ## 24 November 2026
 
+- **3D viewer bug fixed:** the viewer is now recreated per entry, so navigating between monographs via links no longer leaves the 3D box empty; GHRP-2, GHRP-6 and hexarelin gained recorded SMILES with 2D and RDKit 3D views.
 - **3D structures extended:** RDKit ETKDG generates atom-level 3D conformations from recorded SMILES for modified and cyclic peptides (semaglutide, liraglutide, tirzepatide, oxytocin, melanocortins, gonadorelin, thymosin α1, AOD-9604, ipamorelin, cagrilintide, elamipretide, dermorphin, PNC-27, dihexa, FOXO4-DRI, CJC-1295, TB-500, thymosin β4); backbone schematics now also shown for modified peptides with a "modifications not shown" label.
 - **Licence:** site code MIT; monograph content CC BY-SA 4.0.
 - **BPC-157 evidence pass:** pilot monograph now carries 3 DOI-backed animal/original papers, the FDA PCAC July 2026 briefing documents (characterisation gaps, immunogenicity, animal toxicity signals, 8–6 committee vote), and the WADA S0 listing; sequence verified against the FDA document (CAS 137525-51-0).

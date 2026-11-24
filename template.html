@@ -130,11 +130,12 @@ function pdbOf(seq){
   });
   return out+"END\n";
 }
-let v3=null,v3mode="helix";
+let v3=null,v3el=null,v3mode="helix";
 function ccAtom(a){const one=RV[a.resn]||"X";const k=R[one]?R[one].k:"n";return K3[k]||"#999"}
 async function draw3(M){
   const el=$("#v3d");if(!el)return;
-  if(!v3)v3=$3Dmol.createViewer(el,{backgroundColor:"white",antialias:true});
+  if(v3&&v3el!==el){v3el.innerHTML="";v3=null;v3el=null;}
+  if(!v3){v3=$3Dmol.createViewer(el,{backgroundColor:"white",antialias:true});v3el=el;}
   v3.removeAllModels();
   const setBtns=()=>{const bH=$("#bH"),bS=$("#bS"),bX=$("#bX");if(bH)bH.setAttribute("aria-pressed",String(v3mode==="helix"));if(bS)bS.setAttribute("aria-pressed",String(v3mode==="smiles"));if(bX)bX.setAttribute("aria-pressed",String(v3mode==="exp"));};
   if(v3mode==="smiles"&&M.smiles){
