@@ -33,7 +33,10 @@ button{padding:.45rem 1rem;border:1px solid var(--line);background:var(--card);c
 button:hover{border-color:var(--ac)}
 button[aria-pressed=true]{background:var(--ac);color:#fdfcf8;border-color:var(--ac)}
 .r{display:flex;gap:.8rem;justify-content:space-between;align-items:flex-start;padding:.6rem .55rem;border-bottom:1px solid var(--line)}
-.r:hover{background:var(--card)}
+.r:hover{background:var(--bg)}
+.cls{padding:.75rem 1.15rem .4rem}
+.cls h2{margin-bottom:.5rem}
+.cls .r:last-child{border-bottom:none}
 .b{display:inline-block;font-size:.76rem;padding:.16rem .65rem;white-space:nowrap;font-weight:600}
 .A{color:var(--A);background:var(--At)}
 .I{color:var(--I);background:var(--It)}
@@ -88,7 +91,7 @@ const CHANGELOG="<h2>Changelog</h2>\n<h3>24 November 2026</h3>\n<ul><li><strong>
 const N2={};for(const id in MONOS)N2[MONOS[id].name.toLowerCase()]=id;
 const bd=s=>`<span class="b ${s}">${ST[s]}</span>`;
 let F={q:"",s:""};
-function list(){const q=F.q.toLowerCase();let o="";for(const k in CH){const r=D.filter(x=>x.class==k&&(!F.s||x.status==F.s)&&(x.name+" "+x.note).toLowerCase().includes(q));if(!r.length)continue;o+=`<h3>${k}. ${CH[k]}</h3>`+r.map(x=>`<div class="r"><div>${N2[x.name.toLowerCase()]?`<a href="#${N2[x.name.toLowerCase()]}">${esc(x.name)}</a>`:esc(x.name)}<div class="n">${esc(x.note)}</div></div>${bd(x.status)}</div>`).join("")}
+function list(){const q=F.q.toLowerCase();let o="";for(const k in CH){const r=D.filter(x=>x.class==k&&(!F.s||x.status==F.s)&&(x.name+" "+x.note).toLowerCase().includes(q));if(!r.length)continue;o+=`<section class="cls"><h2>${k}. ${CH[k]}</h2>`+r.map(x=>`<div class="r"><div>${N2[x.name.toLowerCase()]?`<a href="#${N2[x.name.toLowerCase()]}">${esc(x.name)}</a>`:esc(x.name)}<div class="n">${esc(x.note)}</div></div>${bd(x.status)}</div>`).join("")+`</section>`}
 $("#list").innerHTML=o||"<p>No entries match. Clear the search or choose All.</p>"}
 function index(){app.innerHTML=`<p class="lead">Candidate peptides grouped by pharmacological class. Status labels are a draft triage from secondary sources and must be verified against regulator, registry and FDA pages before a monograph is published. ${Object.keys(MONOS).length} monograph draft(s) exist so far; the rest are registry entries pending content.</p><div class="bar"><input id="q" type="search" placeholder="Search by name or note" aria-label="Search peptides"><div id="chips">${[["","All"],...Object.entries(ST)].map(([k,v])=>`<button data-s="${k}" aria-pressed="${F.s==k}">${v}</button>`).join("")}</div></div><div id="list"></div>`;
 $("#q").value=F.q;$("#q").oninput=e=>{F.q=e.target.value;list()};
