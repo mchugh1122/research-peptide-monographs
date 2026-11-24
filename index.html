@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peptide Monograph Repository</title>
+<style>
+:root{color-scheme:light;--bg:#f4f7f6;--fg:#14201d;--mut:#51635f;--card:#fff;--line:#d3ddda;--ac:#0b5d56;--A:#0a6a4a;--I:#8a5600;--U:#a3262a;--W:#555;--np:#b5c9d4;--po:#b3dcb5;--ad:#f2b0ab;--bs:#a3c3f2;--sp:#efd48a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1614;--fg:#e4eeeb;--mut:#9fb2ad;--card:#16211e;--line:#2a3b37;--ac:#63d4c8;--A:#6fd7a8;--I:#f2bd62;--U:#f59396;--W:#aaa;--np:#4f6674;--po:#4b7d4f;--ad:#a2504b;--bs:#41659f;--sp:#9b7f2c}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0e1614;--fg:#e4eeeb;--mut:#9fb2ad;--card:#16211e;--line:#2a3b37;--ac:#63d4c8;--A:#6fd7a8;--I:#f2bd62;--U:#f59396;--W:#aaa;--np:#4f6674;--po:#4b7d4f;--ad:#a2504b;--bs:#41659f;--sp:#9b7f2c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.w{max-width:960px;margin:0 auto;padding:0 18px 40px}
+h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2}
+h1{font-size:clamp(1.6rem,4.5vw,2.3rem);margin:0}h2{font-size:1.3rem;margin:0 0 .5rem}h3{font-size:1.05rem;margin:1.6rem 0 .3rem}
+header{border-bottom:3px solid var(--ac);padding-top:22px}
+.sub{color:var(--mut);margin:.4rem 0 .9rem;max-width:64ch}
+nav{display:flex;flex-wrap:wrap;gap:2px}
+nav a{padding:.55rem .9rem;color:var(--fg);text-decoration:none;border-radius:6px 6px 0 0}
+nav a[aria-current]{background:var(--ac);color:var(--bg);font-weight:600}
+a{color:var(--ac)}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.n{color:var(--mut);font-size:.9rem}
+.bar{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+input{flex:1 1 220px;padding:.55rem .7rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg);font:inherit}
+button{padding:.45rem .8rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg);font:inherit;cursor:pointer}
+button[aria-pressed=true]{background:var(--ac);color:var(--bg);border-color:var(--ac)}
+.r{display:flex;gap:.8rem;justify-content:space-between;align-items:flex-start;padding:.55rem 0;border-bottom:1px solid var(--line)}
+.b{font-size:.8rem;border:1px solid currentColor;border-radius:4px;padding:.05rem .45rem;white-space:nowrap}
+.A{color:var(--A)}.I{color:var(--I)}.U{color:var(--U)}.W{color:var(--W)}
+section{margin:1.6rem 0;padding-top:.2rem}
+.ban{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;padding:.7rem .9rem;border:1px solid var(--line);border-left:6px solid var(--U);background:var(--card);border-radius:6px}
+.box{border:1px solid var(--line);border-left:6px solid var(--U);background:var(--card);padding:.2rem 1rem;border-radius:6px}
+.box.i{border-left-color:var(--I)}
+.sc{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.4rem .6rem}
+table{border-collapse:collapse;width:100%;min-width:520px}th,td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--line);vertical-align:top;font-size:.93rem}
+.cb{display:flex;height:16px;border:1px solid var(--line);border-radius:4px;overflow:hidden;margin:.7rem 0 .4rem}.cb i{display:block}
+.lg{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--mut)}
+.sw{display:inline-block;width:.8em;height:.8em;border:1px solid var(--line);margin-right:.3em}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.25rem 1rem;margin:0}dt{color:var(--mut)}dd{margin:0}
+footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--mut);font-size:.85rem}
+</style></head><body><div class="w">
+<header><h1>Peptide Monograph Repository</h1>
+<p class="sub">A neutral, non-commercial formulary-style reference for approved, investigational and unapproved ‘research’ peptides. Nothing here is sold, advertised or linked to a vendor.</p>
+<nav id="nav" aria-label="Sections"></nav></header>
+<main id="app"></main>
+<footer>Draft v0.1 · 24 November 2026 · Pilot content is unreviewed and is not medical advice. Report suspected adverse reactions to your national scheme (for example FDA MedWatch, MHRA Yellow Card or HPRA).</footer>
+</div>
+<script>
+const $=s=>document.querySelector(s),app=$("#app");
+const R={};"G,Gly,57.0519,s;A,Ala,71.0788,n;V,Val,99.1326,n;L,Leu,113.1594,n;I,Ile,113.1594,n;P,Pro,97.1167,s;F,Phe,147.1766,n;W,Trp,186.2132,n;M,Met,131.1926,n;S,Ser,87.0782,p;T,Thr,101.1051,p;C,Cys,103.1388,p;Y,Tyr,163.176,p;H,His,137.1411,b;D,Asp,115.0886,a;E,Glu,129.1155,a;N,Asn,114.1038,p;Q,Gln,128.1307,p;K,Lys,128.1741,b;R,Arg,156.1875,b".split(";").forEach(x=>{const[a,t,m,k]=x.split(",");R[a]={t,m:+m,k}});
+const KN={n:"Nonpolar",p:"Polar",a:"Acidic",b:"Basic",s:"Special"},KC={n:"--np",p:"--po",a:"--ad",b:"--bs",s:"--sp"};
+const ST={A:"Approved",I:"Investigational",U:"Unapproved",W:"Withdrawn"};
+const CH={A:"GLP-1 and incretin-pathway agonists",B:"Growth hormone secretagogues and GHRH analogues",C:"Tissue-repair peptides",D:"Melanocortin peptides",E:"Neuropeptide-derived peptides",F:"Thymic peptides and immune modulators",G:"Antimicrobial and host-defence peptides",H:"Mitochondrial peptides",J:"Sexual and reproductive function",K:"Longevity and short regulatory peptides",L:"Other and adjacent agents"};
+const D=[["Semaglutide","A","A","Approved products exist; unapproved ‘research’ versions are also sold"],["Tirzepatide","A","A","Approved products exist; unapproved ‘research’ versions are also sold"],["Liraglutide","A","A","Generics available in the US"],["Exenatide","A","A",""],["Retatrutide","A","I","Phase 3; unapproved supply widely sold"],["CagriSema","A","I","Under FDA review; decision expected around December 2026"],["Cagrilintide","A","I","Also sold alone as a ‘research’ peptide"],["Survodutide","A","I","Phase 3"],["Mazdutide","A","A","Approved in China only"],["Ecnoglutide","A","A","Approved in China only"],
+["Tesamorelin","B","A","US-approved for HIV-associated abdominal fat"],["Sermorelin","B","W","Formerly approved (Geref); now compounded"],["CJC-1295","B","U","Variants with and without DAC"],["Ipamorelin","B","U",""],["GHRP-2","B","U",""],["GHRP-6","B","U",""],["Hexarelin","B","U",""],["AOD-9604","B","U","FDA notes serious adverse events possibly associated; causality unclear"],["MGF and PEG-MGF","B","U",""],
+["BPC-157","C","U","Pilot monograph available"],["TB-500","C","U","Thymosin beta-4 fragment"],["Thymosin beta-4","C","I",""],["GHK-Cu","C","U","Injectable use; topical use is cosmetic"],["KPV","C","U","Alpha-MSH fragment"],
+["Bremelanotide (PT-141)","D","A","US-approved 2019"],["Afamelanotide","D","A",""],["Setmelanotide","D","A",""],["Melanotan II","D","U","No approved product"],
+["Semax","E","U","Registered in Russia (verify); unapproved in the US and EU"],["Selank","E","U","Registered in Russia (verify); unapproved in the US and EU"],["Dihexa","E","U",""],["P21","E","U","Preclinical"],["Cerebrolysin","E","A","Peptide mixture; approved in some countries"],["DSIP (emideltide)","E","U","July 2026 FDA advisory committee voted against"],
+["Thymosin alpha-1","F","A","Approved in several countries outside the US"],["Thymalin","F","U","Extract, not a single peptide"],["ARA-290","F","I",""],
+["LL-37","G","U","FDA lacks sufficient safety information"],
+["Elamipretide (SS-31)","H","A","US accelerated approval Sept 2025 (Barth syndrome)"],["MOTS-c","H","U",""],["Humanin","H","U","Preclinical"],
+["Gonadorelin","J","A",""],["Oxytocin","J","A",""],["Kisspeptin-10","J","U",""],
+["Epitalon","K","U",""],["FOXO4-DRI","K","U","Preclinical"],["Short ‘bioregulatory’ peptides","K","U","Pinealon, Cortagen, Livagen and others"],
+["PNC-27","L","U","Preclinical"],["Dermorphin","L","U","Opioid peptide; prohibited in sport"],["Teriparatide","L","A","Approved comparator"]];
+const bd=s=>`<span class="b ${s}">${ST[s]}</span>`;
+let F={q:"",s:""};
+function list(){const q=F.q.toLowerCase();let o="";for(const k in CH){const r=D.filter(x=>x[1]==k&&(!F.s||x[2]==F.s)&&(x[0]+" "+x[3]).toLowerCase().includes(q));if(!r.length)continue;o+=`<h3>${k}. ${CH[k]}</h3>`+r.map(x=>`<div class="r"><div>${x[0]=="BPC-157"?'<a href="#bpc-157">BPC-157</a>':x[0]}<div class="n">${x[3]}</div></div>${bd(x[2])}</div>`).join("")}
+$("#list").innerHTML=o||"<p>No entries match. Clear the search or choose All.</p>"}
+function index(){app.innerHTML=`<p class="n">Candidate peptides grouped by pharmacological class. Status labels are a draft triage from secondary sources and must be verified against regulator, registry and FDA pages before a monograph is published. One pilot monograph exists so far.</p><div class="bar"><input id="q" type="search" placeholder="Search by name or note" aria-label="Search peptides"><div id="chips">${[["","All"],...Object.entries(ST)].map(([k,v])=>`<button data-s="${k}" aria-pressed="${F.s==k}">${v}</button>`).join("")}</div></div><div id="list"></div>`;
+$("#q").value=F.q;$("#q").oninput=e=>{F.q=e.target.value;list()};
+$("#chips").onclick=e=>{const b=e.target.closest("button");if(!b)return;F.s=b.dataset.s;[...$("#chips").children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.s==F.s));list()};list()}
+function strip(q){const s=38,w=q.length*s+20;let o=`<svg viewBox="0 0 ${w} 96" width="${w}" height="96" role="img" aria-label="Residue strip from N to C terminus: ${[...q].map(c=>R[c].t).join("-")}"><text x="6" y="12" font-size="11" fill="var(--mut)">N-terminus</text><text x="${w-6}" y="12" font-size="11" text-anchor="end" fill="var(--mut)">C-terminus</text>`;
+[...q].forEach((c,i)=>{const x=20+i*s;if(i)o+=`<line x1="${x-s+15}" y1="38" x2="${x-15}" y2="38" stroke="var(--mut)" stroke-width="2"/>`});
+[...q].forEach((c,i)=>{const x=20+i*s;o+=`<circle cx="${x}" cy="38" r="15" fill="var(${KC[R[c].k]})" stroke="var(--mut)"/><text x="${x}" y="43" font-size="14" font-weight="600" text-anchor="middle" fill="var(--fg)">${c}</text><text x="${x}" y="69" font-size="10" text-anchor="middle" fill="var(--mut)">${R[c].t}</text><text x="${x}" y="83" font-size="10" text-anchor="middle" fill="var(--mut)">${i+1}</text>`});
+return o+"</svg>"}
+const S=(t,h)=>`<section><h2>${t}</h2>${h}</section>`;
+function mono(){const q="GEPPPGKPADDAGLV",L=[...q],c={};L.forEach(x=>c[R[x].k]=(c[R[x].k]||0)+1);
+const mass=L.reduce((a,x)=>a+R[x].m,18.0153).toFixed(2),ch=L.reduce((a,x)=>a+("KR".includes(x)?1:"DE".includes(x)?-1:0),0),ks=Object.keys(KN).filter(k=>c[k]);
+app.innerHTML=`<p><a href="#index">← Index</a> · <span class="n">C. Tissue-repair peptides</span></p><h2 style="font-size:1.9rem;margin-top:.2rem">BPC-157</h2>
+<div class="ban">${bd("U")}<span><strong>Pilot draft, not yet reviewed.</strong> Not approved for any use. Regulatory flags verified 24 Nov 2026 from secondary sources.</span></div>
+${S("Summary","<p>Synthetic 15-residue peptide, described as derived from a gastric protein; proposed in animal studies to aid tissue repair. Not approved anywhere, with very little human evidence.</p>")}
+${S("Structure and composition",`<div class="sc">${strip(q)}</div><div class="cb" role="img" aria-label="Composition by residue class">${ks.map(k=>`<i style="width:${c[k]/L.length*100}%;background:var(${KC[k]})"></i>`).join("")}</div><div class="lg">${ks.map(k=>`<span><b class="sw" style="background:var(${KC[k]})"></b>${KN[k]}: ${c[k]}</span>`).join("")}</div>
+<dl style="margin-top:1rem"><dt>Sequence</dt><dd>${q} (${L.map(x=>R[x].t).join("-")})</dd><dt>Length</dt><dd>${L.length} residues, linear, unmodified</dd><dt>Average mass</dt><dd>${mass} Da (computed in this page from the sequence)</dd><dt>Net charge</dt><dd>${ch<0?"−"+(-ch):ch} at pH 7 from side chains (approximate; termini cancel)</dd></dl><p class="n">The diagram and figures are generated from the sequence field, so every monograph is built the same way and can be checked.</p>`)}
+${S("Mechanism of action","<p><strong>Established:</strong> none identified.<br><strong>Proposed (animal or in vitro only):</strong> effects on tissue repair and blood-vessel signalling. Human pharmacokinetics not identified.</p>")}
+${S("Evidence summary",`<div class="sc"><table><tr><th>Tier</th><th>Finding</th></tr><tr><td>1 to 3 (human)</td><td>No controlled human trials identified. FDA reviewers described the human evidence as essentially an unpublished meeting abstract at the July 2026 advisory committee; some secondary sources cite small pilot studies. To verify.</td></tr><tr><td>4 (animal)</td><td>Many studies. To be graded, including whether they cluster in a single research group.</td></tr></table></div>`)}
+${S("Indications and dose",`<div class="box i"><p><strong>No licensed indications. No established dose.</strong><br>Doses in the table are study conditions, not recommendations.</p></div><div class="sc" style="margin-top:.6rem"><table><tr><th>Species or population</th><th>Route</th><th>Dose as published</th><th>Duration</th><th>Outcome</th><th>Ref.</th></tr><tr><td colspan="6">Not yet populated. Entries need primary-literature extraction and reviewer sign-off.</td></tr></table></div>`)}
+${S("Important safety information and cautions",`<div class="box"><p>FDA’s published safety summary for compounding raises possible immunogenicity for certain routes of administration, and difficulty characterising the active ingredient and peptide-related impurities. No safe or effective dose has been established.</p></div>`)}
+${S("Contraindications","<p>None established, because the compound has not been formally evaluated.</p><p><strong>Precautionary considerations (mechanism-inferred, unverified):</strong> active cancer, given proposed effects on blood-vessel growth; pregnancy and breastfeeding, because there are no safety data.</p>")}
+${S("Side effects","<p>Frequency not known. No human trial safety data identified. Injection-site and immune reactions are relevant given FDA’s immunogenicity concern. Animal-reported effects: to be added.</p>")}
+${S("Product quality","<p>To be added from independent analytical studies. Vendor certificates of analysis are never used as evidence.</p>")}
+${S("Handling and storage","<p>No validated stability data entered. Reconstitution and administration instructions are deliberately not given for unapproved compounds.</p>")}
+${S("Regulatory and sport status",`<div class="sc"><table><tr><th>Jurisdiction</th><th>Status</th></tr><tr><td>United States</td><td>Unapproved. Removed from FDA compounding Category 2 in April 2026 after nominations were withdrawn; an FDA advisory committee recommended adding it to the 503A bulks list in July 2026 while FDA scientists recommended against. Final FDA action not confirmed.</td></tr><tr><td>Sport</td><td>Reported as prohibited by WADA (non-approved substances). Verify.</td></tr><tr><td>EU, UK, Ireland, Canada, Australia</td><td>Not yet populated.</td></tr></table></div>`)}
+${S("Notes for clinicians","<p>Useful questions: where it was obtained and in what form, the dose and duration used, other medicines and supplements, and the reason for use. Document the answers, consider the safety section above, and report any adverse event to the national scheme.</p>")}
+${S("Plain-language page","<p><strong>What is it?</strong> A lab-made chain of 15 amino acids.<br><strong>What do we know?</strong> Mostly animal studies. It is not an approved medicine.<br><strong>What don’t we know?</strong> Whether it works in people, what dose is safe, and what is actually in products sold online.<br><strong>What should I tell my doctor or pharmacist?</strong> That you are using or considering it, where it came from, and how much you take.</p>")}
+${S("Evidence gaps","<ul><li>No published controlled human trials identified</li><li>No human pharmacokinetic or long-term safety data</li><li>No independent analysis of marketed products yet entered</li></ul>")}
+<p class="n">Reviewer: none yet · Last verified 24 Nov 2026 · Next review due: not set · Version 0.1 pilot</p>`}
+function standards(){app.innerHTML=S("Evidence tiers",`<ul><li><strong>Tier 1:</strong> regulatory approval with a label, or two or more good human RCTs or a meta-analysis</li><li><strong>Tier 2:</strong> a single RCT, a large controlled human study, or pivotal regulatory data</li><li><strong>Tier 3:</strong> small or uncontrolled human studies, observational data, case reports</li><li><strong>Tier 4:</strong> in vivo animal studies</li><li><strong>Tier 5:</strong> in vitro, in silico or mechanistic only</li><li><strong>Tier 0:</strong> unverifiable (abstracts, trade claims, vendor material); recorded, never used to support a claim</li></ul>`)+S("Source rules","<p><strong>Allowed:</strong> peer-reviewed literature, trial registries, regulators, pharmacopoeias, WADA, independent analytical studies, systematic reviews.<br><strong>Not allowed as evidence:</strong> vendor sites and press releases, forums, social media, unverified certificates of analysis.</p>")+S("Dose and storage policy","<p>Approved drugs follow the label. For unapproved compounds the repository states that there is no established dose, tabulates doses used in published studies as study conditions, and gives no ‘typical user’ doses, cycling or stacking schedules, or reconstitution and injection instructions.</p>")+S("Pledges","<ul><li>No peptides, products, vendors or affiliate links</li><li>No advertising or sponsorship</li><li>Every claim sourced and dated; gaps stated plainly</li><li>Corrections published in a public changelog</li></ul>")}
+function discussion(){app.innerHTML=S("Discussion",`<div class="box i"><p><strong>Not open yet.</strong> Discussion will open after moderation rules and legal review are in place.</p></div><p>Planned rules:</p><ul><li>Community posts are labelled anecdotal and kept apart from monograph text</li><li>No vendor names, links, discount codes or ‘where do you get yours’ threads, including indirect forms</li><li>Experience reports use structured fields and prompt an official adverse-event report</li><li>Verified-clinician flair and an optional clinician-only space</li><li>Only evidence meeting the rubric changes a monograph</li></ul>`)}
+function go(){const h=(location.hash||"#index").slice(1),V={index,"bpc-157":mono,standards,discussion};
+$("#nav").innerHTML=[["index","Index"],["bpc-157","Pilot monograph"],["standards","Standards"],["discussion","Discussion"]].map(([k,t])=>`<a href="#${k}"${k==h?' aria-current="page"':""}>${t}</a>`).join("");(V[h]||index)();scrollTo(0,0)}
+addEventListener("hashchange",go);go();
+</script></body></html>
