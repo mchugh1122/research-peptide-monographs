@@ -5,25 +5,25 @@
 <title>Peptide Monograph Repository</title>
 <script src="assets/3dmol-min.js"></script>
 <style>
-:root{color-scheme:light;--bg:#f6f3ec;--fg:#1d2623;--mut:#6f736b;--card:#fffdf7;--line:#e2dccd;--ac:#0e6a52;--ac2:#0a5543;--soft:#e7efe9;--A:#17724a;--At:#e3f0e8;--I:#8f6200;--It:#f7edd4;--U:#a3262a;--Ut:#f8e3e1;--W:#5c615e;--Wt:#eaeae7;--np:#b5c9d4;--po:#b3dcb5;--ad:#f2b0ab;--bs:#a3c3f2;--sp:#efd48a;--sh:0 1px 2px rgba(29,38,35,.05),0 4px 14px rgba(29,38,35,.05);box-sizing:border-box}
+:root{color-scheme:light;--bg:#f6f3ec;--fg:#1d2623;--mut:#6f736b;--card:#fffdf7;--line:#e8e2d2;--ac:#0eb98d;--ac-ink:#0a8f6e;--soft:#d8f7ec;--A:#0f9d58;--At:#d9f7e9;--I:#b57a00;--It:#ffe9c2;--U:#e8355a;--Ut:#ffdbe2;--W:#5d6b8f;--Wt:#e8ecf8;--np:#9fd8ef;--po:#7ae3a8;--ad:#ff8f9e;--bs:#8ab4ff;--sp:#ffe066;--sh:0 1px 2px rgba(29,38,35,.05),0 4px 14px rgba(29,38,35,.05);box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
 .w{max-width:980px;margin:0 auto;padding:0 20px 44px}
-::selection{background:#cfe0d6;color:var(--fg)}
+::selection{background:#d8f7ec;color:var(--fg)}
 h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.25;color:var(--fg)}
 h1{font-size:clamp(1.7rem,4.5vw,2.4rem);margin:0;letter-spacing:.01em}
 h2{font-size:1.32rem;margin:0 0 .6rem}
 h3{font-size:1.08rem;margin:1.5rem 0 .3rem}
 header{padding:calc(30px + env(safe-area-inset-top,0px)) 0 0}
 .mast{display:flex;justify-content:space-between;align-items:flex-start;gap:1.2rem;flex-wrap:wrap}
-.tag{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;background:var(--card);box-shadow:var(--sh);white-space:nowrap;margin-top:.35rem}
+.tag{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ac-ink);border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;background:var(--card);box-shadow:var(--sh);white-space:nowrap;margin-top:.35rem}
 .sub{color:var(--mut);font-style:italic;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.05rem;margin:.5rem 0 1.1rem;max-width:66ch}
 nav{display:flex;flex-wrap:wrap;gap:4px;margin-top:.4rem;border-bottom:2px solid var(--ac)}
 nav a{padding:.5rem 1rem;color:var(--fg);text-decoration:none;border-radius:8px 8px 0 0;border:1px solid transparent;border-bottom:none;font-size:.95rem}
 nav a:hover{background:var(--soft)}
 nav a[aria-current]{background:var(--ac);color:#fdfcf8;font-weight:600}
-a{color:var(--ac);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
-a:hover{color:var(--ac2)}
+a{color:var(--ac-ink);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{color:var(--ac)}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--ac);outline-offset:2px;border-radius:4px}
 .n{color:var(--mut);font-size:.9rem}
 .lead{font-size:1.03rem;color:var(--fg)}
@@ -40,7 +40,7 @@ button[aria-pressed=true]{background:var(--ac);color:#fdfcf8;border-color:var(--
 .U{color:var(--U);background:var(--Ut)}
 .W{color:var(--W);background:var(--Wt)}
 section{margin:1.7rem 0;padding-top:.2rem}
-section h2{color:var(--ac);border-bottom:1px solid var(--line);padding-bottom:.4rem;margin-bottom:.7rem}
+section h2{color:var(--ac-ink);border-bottom:1px solid var(--line);padding-bottom:.4rem;margin-bottom:.7rem}
 .ban{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;padding:.85rem 1.05rem;border:1px solid var(--line);border-left:5px solid var(--U);background:var(--card);border-radius:10px;box-shadow:var(--sh)}
 .box{border:1px solid var(--line);border-left:5px solid var(--U);background:var(--card);padding:.3rem 1.1rem;border-radius:10px;box-shadow:var(--sh)}
 .box.i{border-left-color:var(--I)}
@@ -63,7 +63,7 @@ dd{margin:0}
 .v2dbox svg rect:first-of-type{fill:transparent !important}
 #v2dCap code{font-size:.82rem;word-break:break-all}
 .cta{display:inline-block;margin:.5rem 0 .2rem;padding:.55rem 1.2rem;background:var(--ac);color:#fdfcf8;text-decoration:none;border-radius:999px;font-weight:600;box-shadow:var(--sh)}
-.cta:hover{background:var(--ac2);color:#fdfcf8}
+.cta:hover{background:var(--ac-ink);color:#fdfcf8}
 footer{margin-top:3rem;padding:1.5rem 0 1.2rem;border-top:3px double var(--line);color:var(--mut);font-size:.82rem;text-align:center;letter-spacing:.02em}
 </style></head><body><div class="w">
 <header><div class="mast"><div><h1>Peptide Monograph Repository</h1>
@@ -79,7 +79,7 @@ const R={};"G,Gly,57.0519,s;A,Ala,71.0788,n;V,Val,99.1326,n;L,Leu,113.1594,n;I,I
 const AA3={G:"GLY",A:"ALA",V:"VAL",L:"LEU",I:"ILE",P:"PRO",F:"PHE",W:"TRP",M:"MET",S:"SER",T:"THR",C:"CYS",Y:"TYR",H:"HIS",D:"ASP",E:"GLU",N:"ASN",Q:"GLN",K:"LYS",R:"ARG",X:"AIB"};
 const RV={};for(const c in AA3)RV[AA3[c]]=c;
 const KN={n:"Nonpolar",p:"Polar",a:"Acidic",b:"Basic",s:"Special"},KC={n:"--np",p:"--po",a:"--ad",b:"--bs",s:"--sp"};
-const K3={n:"#b5c9d4",p:"#b3dcb5",a:"#f2b0ab",b:"#a3c3f2",s:"#efd48a"};
+const K3={n:"#9fd8ef",p:"#7ae3a8",a:"#ff8f9e",b:"#8ab4ff",s:"#ffe066"};
 const ST={A:"Approved",I:"Investigational",U:"Unapproved",W:"Withdrawn"};
 const CH={A:"GLP-1 and incretin-pathway agonists",B:"Growth hormone secretagogues and GHRH analogues",C:"Tissue-repair peptides",D:"Melanocortin peptides",E:"Neuropeptide-derived peptides",F:"Thymic peptides and immune modulators",G:"Antimicrobial and host-defence peptides",H:"Mitochondrial peptides",J:"Sexual and reproductive function",K:"Longevity and short regulatory peptides",L:"Other and adjacent agents"};
 const D=/*__REGISTRY__*/null;
