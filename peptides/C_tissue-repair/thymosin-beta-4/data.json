@@ -13,5 +13,6 @@
  "next_review": null,
  "reviewer": null,
  "version": "0.1 skeleton",
- "nonstandard": true
+ "nonstandard": true,
+ "smiles": "CCC(C)C(C(=O)NC(CCC(=O)O)C(=O)NC(CCCCN)C(=O)NC(CC1=CC=CC=C1)C(=O)NC(CC(=O)O)C(=O)NC(CCCCN)C(=O)NC(CO)C(=O)NC(CCCCN)C(=O)NC(CC(C)C)C(=O)NC(CCCCN)C(=O)NC(CCCCN)C(=O)NC(C(C)O)C(=O)NC(CCC(=O)O)C(=O)NC(C(C)O)C(=O)NC(CCC(=O)N)C(=O)NC(CCC(=O)O)C(=O)NC(CCCCN)C(=O)NC(CC(=O)N)C(=O)N2CCCC2C(=O)NC(CC(C)C)C(=O)N3CCCC3C(=O)NC(CO)C(=O)NC(CCCCN)C(=O)NC(CCC(=O)O)C(=O)NC(C(C)O)C(=O)NC(C(C)CC)C(=O)NC(CCC(=O)O)C(=O)NC(CCC(=O)N)C(=O)NC(CCC(=O)O)C(=O)NC(CCCCN)C(=O)NC(CCC(=O)N)C(=O)NC(C)C(=O)NCC(=O)NC(CCC(=O)O)C(=O)NC(CO)C(=O)O)NC(=O)C(CCC(=O)O)NC(=O)C(C)NC(=O)C(CCSC)NC(=O)C(CC(=O)O)NC(=O)C4CCCN4C(=O)C(CCCCN)NC(=O)C(CC(=O)O)NC(=O)C(CO)NC(=O)C"
 }

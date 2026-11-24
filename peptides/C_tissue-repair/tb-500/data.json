@@ -13,5 +13,6 @@
  "next_review": null,
  "reviewer": null,
  "version": "0.1 skeleton",
- "nonstandard": true
+ "nonstandard": true,
+ "smiles": "C[C@H]([C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CCC(=O)N)C(=O)O)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CC(C)C)NC(=O)C)O"
 }
