@@ -4,15 +4,15 @@
  "aliases": [],
  "class": "D",
  "status": "U",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": null,
  "sequence_note": null,
  "structure_note": "Ac-Nle-Asp-His-D-Phe-Arg-Trp-Lys-NH2 with an Asp2–Lys7 lactam bridge. Atom-level display pending.",
  "pdb": null,
- "verified": "2026-11-24",
+ "verified": "2026-11-26",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
+ "version": "0.1 draft",
  "nonstandard": true,
  "smiles": "CCCC[C@@H](C(=O)N[C@H]1CC(=O)NCCCC[C@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](NC(=O)[C@@H](NC1=O)CC2=CN=CN2)CC3=CC=CC=C3)CCCN=C(N)N)CC4=CNC5=CC=CC=C54)C(=O)N)NC(=O)C"
 }

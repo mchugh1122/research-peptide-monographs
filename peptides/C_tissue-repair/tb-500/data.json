@@ -4,15 +4,15 @@
  "aliases": [],
  "class": "C",
  "status": "U",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": "LKKTETQ",
  "sequence_note": "Verified against PubChem record (formula match) (acetylated form)",
  "structure_note": "Thymosin β4(17–23) fragment; sold in the acetylated form per the PubChem record (acetylation not depicted). 2D/3D views pending support.",
  "pdb": null,
- "verified": "2026-11-24",
+ "verified": "2026-11-26",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
+ "version": "0.1 draft",
  "nonstandard": true,
  "smiles": "C[C@H]([C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CCC(=O)N)C(=O)O)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CC(C)C)NC(=O)C)O"
 }

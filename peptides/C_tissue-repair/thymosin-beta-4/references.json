@@ -1,2 +1,22 @@
 [
+ {
+  "doi": "10.1073/pnas.79.7.2172",
+  "tier": 5,
+  "claim": "Thymosin beta-4: a ubiquitous peptide in rat and mouse tissues."
+ },
+ {
+  "doi": "10.1038/nature03000",
+  "tier": 4,
+  "claim": "Cardiac repair in mice: cell migration, survival and cardiac repair after infarction."
+ },
+ {
+  "doi": "10.1016/j.molmed.2005.07.004",
+  "tier": 2,
+  "claim": "Review: actin-sequestering protein that 'moonlights' to repair injured tissues (dermal, corneal, cardiac)."
+ },
+ {
+  "doi": "10.1196/annals.1415.051",
+  "tier": 2,
+  "claim": "Development programme for thymosin beta-4 in ischemic heart disease (RegeneRx)."
+ }
 ]

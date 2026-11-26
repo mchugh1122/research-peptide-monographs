@@ -1,2 +1,17 @@
 [
+ {
+  "doi": "10.1097/AOG.0000000000003500",
+  "tier": 1,
+  "claim": "Two phase 3 trials (RECONNECT): subcutaneous bremelanotide 1.75 mg as needed improved desire and reduced distress in premenopausal women with hypoactive sexual desire disorder (HSDD)."
+ },
+ {
+  "doi": "10.1007/s40265-019-01187-w",
+  "tier": 2,
+  "claim": "First approval review (US FDA, 2019)."
+ },
+ {
+  "doi": "10.1080/00224499.2021.1885601",
+  "tier": 3,
+  "claim": "Independent re-analysis questioning the clinical significance of the phase 3 effect sizes."
+ }
 ]

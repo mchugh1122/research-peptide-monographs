@@ -1,2 +1,28 @@
 [
+ {
+  "doi": "10.1073/pnas.79.7.2172",
+  "tier": 5,
+  "claim": "Early characterisation of thymosin beta-4 as a ubiquitous peptide."
+ },
+ {
+  "doi": "10.1038/nature03000",
+  "tier": 4,
+  "claim": "Thymosin beta-4 promotes cardiac cell migration, survival and repair after infarction in mice (integrin-linked kinase activation)."
+ },
+ {
+  "doi": "10.1002/dta.1402",
+  "tier": 5,
+  "claim": "Synthesis and characterisation of the N-terminal acetylated 17-23 fragment of thymosin beta-4 — the form identified as TB-500."
+ },
+ {
+  "doi": "10.1016/j.chroma.2012.09.043",
+  "tier": 5,
+  "claim": "Doping-control analytical method for TB-500 (equine); reflects WADA interest in the substance."
+ },
+ {
+  "url": "https://www.fda.gov/media/193342/download",
+  "title": "FDA PCAC meeting briefing package (23–24 July 2026)",
+  "claim": "TB-500-related bulk drug substances were reviewed at the July 2026 Pharmacy Compounding Advisory Committee meeting alongside other peptides.",
+  "note": "regulator document"
+ }
 ]

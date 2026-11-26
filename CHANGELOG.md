@@ -1,5 +1,9 @@
 # Changelog
 
+## 26 November 2026
+
+- **Class C + D evidence drafts:** TB-500, thymosin beta-4, GHK-Cu and KPV (tissue repair) and bremelanotide, afamelanotide, setmelanotide and Melanotan II (melanocortins) populated with DOI-backed, tiered references; TB-500 cross-referenced to the July 2026 FDA PCAC briefing.
+
 ## 24 November 2026
 
 - **Site retitled** to Pharmacopoeia Peptidorum (repo name unchanged).

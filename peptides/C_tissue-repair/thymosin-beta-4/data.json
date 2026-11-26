@@ -4,15 +4,15 @@
  "aliases": [],
  "class": "C",
  "status": "I",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": "SDKPDMAEIEKFDKSKLKKTETQEKNPLPSKETIEQEKQAGES",
  "sequence_note": "Verified against PubChem record (formula match) (acetylated form)",
  "structure_note": "N-terminally acetylated in the natural form (acetylation not depicted). 2D/3D views pending support for the modified terminus.",
  "pdb": null,
- "verified": "2026-11-24",
+ "verified": "2026-11-26",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
+ "version": "0.1 draft",
  "nonstandard": true,
  "smiles": "CCC(C)C(C(=O)NC(CCC(=O)O)C(=O)NC(CCCCN)C(=O)NC(CC1=CC=CC=C1)C(=O)NC(CC(=O)O)C(=O)NC(CCCCN)C(=O)NC(CO)C(=O)NC(CCCCN)C(=O)NC(CC(C)C)C(=O)NC(CCCCN)C(=O)NC(CCCCN)C(=O)NC(C(C)O)C(=O)NC(CCC(=O)O)C(=O)NC(C(C)O)C(=O)NC(CCC(=O)N)C(=O)NC(CCC(=O)O)C(=O)NC(CCCCN)C(=O)NC(CC(=O)N)C(=O)N2CCCC2C(=O)NC(CC(C)C)C(=O)N3CCCC3C(=O)NC(CO)C(=O)NC(CCCCN)C(=O)NC(CCC(=O)O)C(=O)NC(C(C)O)C(=O)NC(C(C)CC)C(=O)NC(CCC(=O)O)C(=O)NC(CCC(=O)N)C(=O)NC(CCC(=O)O)C(=O)NC(CCCCN)C(=O)NC(CCC(=O)N)C(=O)NC(C)C(=O)NCC(=O)NC(CCC(=O)O)C(=O)NC(CO)C(=O)O)NC(=O)C(CCC(=O)O)NC(=O)C(C)NC(=O)C(CCSC)NC(=O)C(CC(=O)O)NC(=O)C4CCCN4C(=O)C(CCCCN)NC(=O)C(CC(=O)O)NC(=O)C(CO)NC(=O)C"
 }

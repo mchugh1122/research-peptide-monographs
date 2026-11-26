@@ -1,2 +1,12 @@
 [
+ {
+  "doi": "10.1002/ibd.20334",
+  "tier": 4,
+  "claim": "KPV (alpha-MSH 11-13 fragment) has anti-inflammatory potential in murine models of inflammatory bowel disease."
+ },
+ {
+  "doi": "10.1053/j.gastro.2007.10.026",
+  "tier": 4,
+  "claim": "PepT1-mediated uptake of KPV reduces intestinal inflammation in mice."
+ }
 ]

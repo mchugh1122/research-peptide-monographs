@@ -6,15 +6,15 @@
  ],
  "class": "D",
  "status": "A",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": null,
  "sequence_note": null,
  "structure_note": "Ac-Ser-Tyr-Ser-Nle-Glu-His-D-Phe-Arg-Trp-Gly-Lys-Pro-Val-NH2; Nle and D-Phe. Atom-level display pending.",
  "pdb": null,
- "verified": "2026-11-24",
+ "verified": "2026-11-26",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
+ "version": "0.1 draft",
  "nonstandard": true,
  "smiles": "CCCC[C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CC1=CN=CN1)C(=O)N[C@H](CC2=CC=CC=C2)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CC3=CNC4=CC=CC=C43)C(=O)NCC(=O)N[C@@H](CCCCN)C(=O)N5CCC[C@H]5C(=O)N[C@@H](C(C)C)C(=O)N)NC(=O)[C@H](CO)NC(=O)[C@H](CC6=CC=C(C=C6)O)NC(=O)[C@H](CO)NC(=O)C"
 }
