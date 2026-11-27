@@ -16,5 +16,15 @@
  "reviewer": null,
  "version": "0.1 draft",
  "nonstandard": true,
- "smiles": "C[C@@H]1C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](CSSC[C@@H](C(=O)N1)NC(=O)[C@H](CCCN=C(N)N)NC(=O)C)C(=O)N)CC2=CNC3=CC=CC=C32)CCCN=C(N)N)CC4=CC=CC=C4)CC5=CN=CN5"
+ "smiles": "C[C@@H]1C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](CSSC[C@@H](C(=O)N1)NC(=O)[C@H](CCCN=C(N)N)NC(=O)C)C(=O)N)CC2=CNC3=CC=CC=C32)CCCN=C(N)N)CC4=CC=CC=C4)CC5=CN=CN5",
+ "trace": [
+  "ARG",
+  "CYS",
+  "DAL",
+  "HIS",
+  "DPH",
+  "ARG",
+  "TRP",
+  "CYS"
+ ]
 }

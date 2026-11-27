@@ -104,6 +104,9 @@ const S=(t,h)=>`<section><h2>${t}</h2>${h}</section>`;
 /* ---------- 3D: ideal backbone from sequence ---------- */
 function pdbOf(seq){
   const D2R=Math.PI/180, ph=-57.8*D2R, ps=-47*D2R;
+  const arr=Array.isArray(seq),items=arr?seq:[...seq];
+  const resnOf=i=>arr?items[i]:AA3[items[i]];
+  const cbOf=i=>arr?true:items[i]!=="G";
   const nerf=(a,b,c,l,th,ch)=>{const e=[c[0]-b[0],c[1]-b[1],c[2]-b[2]],L=Math.hypot(...e);const ex=e[0]/L,ey=e[1]/L,ez=e[2]/L;const ba=[b[0]-a[0],b[1]-a[1],b[2]-a[2]];let n1=[ba[1]*ez-ba[2]*ey,ba[2]*ex-ba[0]*ez,ba[0]*ey-ba[1]*ex];const nl=Math.hypot(...n1)||1;n1=[n1[0]/nl,n1[1]/nl,n1[2]/nl];const c1=Math.cos(ch),s1=Math.sin(ch);const en=[ey*n1[2]-ez*n1[1],ez*n1[0]-ex*n1[2],ex*n1[1]-ey*n1[0]];const n2=[c1*n1[0]+s1*en[0],c1*n1[1]+s1*en[1],c1*n1[2]+s1*en[2]];const w=[n2[1]*ez-n2[2]*ey,n2[2]*ex-n2[0]*ez,n2[0]*ey-n2[1]*ex];const st=Math.sin(th),ct=Math.cos(th);return [c[0]+l*(-ct*ex+st*w[0]),c[1]+l*(-ct*ey+st*w[1]),c[2]+l*(-ct*ez+st*w[2])];};
   const atoms=[];
   const add=(nm,resi,p,el)=>{atoms.push([nm,resi,p,el]);};
@@ -111,52 +114,35 @@ function pdbOf(seq){
   const C0=nerf([0,1,0],N0,CA0,1.525,111.0*D2R,180*D2R);
   const O0=nerf(N0,CA0,C0,1.231,120.8*D2R,ps+180*D2R);
   add("N",1,N0,"N");add("CA",1,CA0,"C");add("C",1,C0,"C");add("O",1,O0,"O");
-  if(seq[0]!=="G")add("CB",1,nerf(N0,C0,CA0,1.521,110.1*D2R,122.7*D2R),"C");
-  for(let i=1;i<seq.length;i++){
+  if(cbOf(0))add("CB",1,nerf(N0,C0,CA0,1.521,110.1*D2R,122.7*D2R),"C");
+  let prevCb=cbOf(0);
+  for(let i=1;i<items.length;i++){
     // recover previous residue atoms (N,CA,C,O[,CB] are the last 4 or 5 in the stack)
-    const stk=atoms.slice(-(seq[i-1]==="G"?4:5));
+    const stk=atoms.slice(-(prevCb?5:4));
     const A0=stk[0][2],A1=stk[1][2],A2=stk[2][2],A3=stk[3][2];
     const N=nerf(A1,A3,A2,1.329,122.9*D2R,180*D2R);
     const CA=nerf(A1,A2,N,1.458,121.7*D2R,180*D2R);
     const C=nerf(A2,N,CA,1.525,111.0*D2R,ph);
     const O=nerf(N,CA,C,1.231,120.8*D2R,ps+180*D2R);
     add("N",i+1,N,"N");add("CA",i+1,CA,"C");add("C",i+1,C,"C");add("O",i+1,O,"O");
-    if(seq[i]!=="G")add("CB",i+1,nerf(N,C,CA,1.521,110.1*D2R,122.7*D2R),"C");
+    if(cbOf(i))add("CB",i+1,nerf(N,C,CA,1.521,110.1*D2R,122.7*D2R),"C");
+    prevCb=cbOf(i);
   }
   let out="";
   atoms.forEach((a,idx)=>{
     const nm=a[0],resi=a[1],p=a[2],el=a[3];
-    out+=`ATOM  ${String(idx+1).padStart(5)} ${nm.padStart(4)} ${AA3[seq[resi-1]]} A${String(resi).padStart(4)}    ${p[0].toFixed(3).padStart(8)}${p[1].toFixed(3).padStart(8)}${p[2].toFixed(3).padStart(8)}  1.00  0.00          ${el.padStart(2)}\n`;
+    out+=`ATOM  ${String(idx+1).padStart(5)} ${nm.padStart(4)} ${resnOf(resi-1).padStart(3)} A${String(resi).padStart(4)}    ${p[0].toFixed(3).padStart(8)}${p[1].toFixed(3).padStart(8)}${p[2].toFixed(3).padStart(8)}  1.00  0.00          ${el.padStart(2)}\n`;
   });
   return out+"END\n";
 }
 let v3=null,v3el=null,v3mode="helix";
-function ccAtom(a){const one=RV[a.resn]||"X";const k=R[one]?R[one].k:"n";return K3[k]||"#999"}
+function ccAtom(a){const one=RV[a.resn];if(!one){const P=["#9fd8ef","#7ae3a8","#ff8f9e","#8ab4ff","#ffe066"];return P[(+a.resi)%P.length];}const k=R[one]?R[one].k:"n";return K3[k]||"#999"}
 async function draw3(M){
   const el=$("#v3d");if(!el)return;
   if(v3&&v3el!==el){v3el.innerHTML="";v3=null;v3el=null;}
   if(!v3){v3=$3Dmol.createViewer(el,{backgroundColor:"white",antialias:true});v3el=el;}
   v3.removeAllModels();
-  const setBtns=()=>{const bH=$("#bH"),bS=$("#bS"),bX=$("#bX");if(bH)bH.setAttribute("aria-pressed",String(v3mode==="helix"));if(bS)bS.setAttribute("aria-pressed",String(v3mode==="smiles"));if(bX)bX.setAttribute("aria-pressed",String(v3mode==="exp"));};
-  if(v3mode==="smiles"&&M.smiles){
-    setBtns();
-    $("#v3dCap").innerHTML="Generating a 3D conformation from the recorded SMILES with RDKit (ETKDG embedding)…";
-    try{
-      const R=await rdkit();
-      const mol=R.get_mol(M.smiles);
-      if(!mol)throw new Error("could not parse the SMILES");
-      mol.set_new_coords(false);
-      const mb=mol.get_v3Kmolblock();
-      mol.delete();
-      v3.addModel(mb,"sdf");
-      v3.setStyle({}, {stick:{radius:0.15,colorscheme:"Jmol"}});
-      v3.zoomTo();v3.render();
-      $("#v3dCap").innerHTML=`Atom-level 3D conformation generated from the recorded SMILES with RDKit (ETKDG embedding). A representative computed conformation, not an experimental structure.`;
-    }catch(e){
-      $("#v3dCap").innerHTML=`3D conformation generation failed (${esc(e&&e.message||e)}).`;
-    }
-    return;
-  }
+  const setBtns=()=>{const bH=$("#bH"),bX=$("#bX");if(bH)bH.setAttribute("aria-pressed",String(v3mode==="helix"));if(bX)bX.setAttribute("aria-pressed",String(v3mode==="exp"));};
   if(v3mode==="exp"&&M.pdb){
     setBtns();
     try{
@@ -175,11 +161,13 @@ async function draw3(M){
     }
     return;
   }
-  v3.addModel(pdbOf(M.sequence),"pdb");
+  v3.addModel(pdbOf(M.sequence||M.trace),"pdb");
   v3.setStyle({}, {cartoon:{colorfunc:ccAtom}});
   v3.addStyle({atom:"CB"},{stick:{radius:0.2,colorfunc:ccAtom}});
   v3.zoomTo();v3.render();
-  $("#v3dCap").innerHTML="Schematic model generated locally from the sequence (ideal α-helix φ = −57.8°, ψ = −47.0°). Not an experimental structure. Side chains are shown as Cβ stubs."+(M.nonstandard?" Backbone only: modified residues and termini are not shown.":"");
+  $("#v3dCap").innerHTML="Schematic backbone ribbon generated locally from the residue sequence (ideal α-helix φ = −57.8°, ψ = −47.0°). Not an experimental structure."
+    +(M.cyclic?" Cyclic bridges (disulfide or lactam) are not shown.":"")
+    +(M.nonstandard?" Backbone only: modified residues and termini are not shown.":"");
   setBtns();
 }
 /* ---------- 2D: atom-level structure via RDKit (WASM, offline) ---------- */
@@ -235,22 +223,22 @@ async function draw2D(M){
 /* ---------- monograph page ---------- */
 function structureSection(M){
   const hasSeq=!!M.sequence, can2D=!!M.smiles||(hasSeq&&!M.nonstandard), can3D=hasSeq&&!M.nonstandard;
-  const showChain=hasSeq&&!M.cyclic, showSmiles3=M.smiles&&!showChain;
+  const showChain=!!(hasSeq||M.trace);
   if(!hasSeq&&!can2D)return `<div class="box i"><p><strong>No single defined sequence.</strong> ${M.structure_note?esc(M.structure_note):"This entry is a mixture, combination product or extract, so structure display does not apply."}</p></div>`;
   let h="";
   if(hasSeq){
     const q=M.sequence,L=[...q],c={};L.forEach(x=>c[R[x].k]=(c[R[x].k]||0)+1);
     const mass=L.reduce((a,x)=>a+R[x].m,18.0153).toFixed(2),ch=L.reduce((a,x)=>a+("KR".includes(x)?1:"DE".includes(x)?-1:0),0),ks=Object.keys(KN).filter(k=>c[k]);
     h+=`<div class="sc">${strip(q)}</div><div class="cb" role="img" aria-label="Composition by residue class">${ks.map(k=>`<i style="width:${c[k]/L.length*100}%;background:var(${KC[k]})"></i>`).join("")}</div><div class="lg">${ks.map(k=>`<span><b class="sw" style="background:var(${KC[k]})"></b>${KN[k]}: ${c[k]}</span>`).join("")}${q.includes("X")?`<span><b class="sw" style="background:var(--np)"></b>X = Aib (α-aminoisobutyric acid)</span>`:""}</div>
-<dl style="margin-top:1rem"><dt>Sequence</dt><dd>${q} (${L.map(x=>R[x].t).join("-")})${M.sequence_note?` <span class="n">— ${esc(M.sequence_note)}</span>`:""}</dd>${M.aliases&&M.aliases.length?`<dt>Aliases</dt><dd>${M.aliases.map(esc).join("; ")}</dd>`:""}<dt>Length</dt><dd>${L.length} residues, ${M.cyclic?"cyclic":"linear"}${M.c_term==="amide"?"; C-terminal amide":""}</dd><dt>Average mass</dt><dd>${mass} Da (computed in this page from the sequence)</dd><dt>Net charge</dt><dd>${ch<0?"−"+(-ch):ch} at pH 7 from side chains (approximate; termini cancel)</dd></dl>`;
+<dl style="margin-top:1rem"><dt>Sequence</dt><dd>${q} (${L.map(x=>R[x].t).join("-")})${M.sequence_note?` <span class="n">— ${esc(M.sequence_note)}</span>`:""}</dd>${!hasSeq&&M.trace?`<dt>Residue trace</dt><dd>${M.trace.map(esc).join("–")}</dd>`:""}${M.aliases&&M.aliases.length?`<dt>Aliases</dt><dd>${M.aliases.map(esc).join("; ")}</dd>`:""}<dt>Length</dt><dd>${L.length} residues, ${M.cyclic?"cyclic":"linear"}${M.c_term==="amide"?"; C-terminal amide":""}</dd><dt>Average mass</dt><dd>${mass} Da (computed in this page from the sequence)</dd><dt>Net charge</dt><dd>${ch<0?"−"+(-ch):ch} at pH 7 from side chains (approximate; termini cancel)</dd></dl>`;
   }
   if(M.nonstandard)h+=`<div class="box i" style="margin-top:1rem"><p>${M.structure_note?esc(M.structure_note):"This peptide contains non-standard or modified residues; some structure views are not yet supported."}</p></div>`;
   if(can2D)h+=`<h3 style="margin-top:1.4rem">2D structure</h3>
 <div class="sc v2dbox" id="v2d"></div>
 <p class="n" id="v2dCap"></p>`;
-  if(M.pdb||can3D||showSmiles3||showChain)h+=`<h3 style="margin-top:1.4rem">3D view</h3>
+  if(M.pdb||showChain)h+=`<h3 style="margin-top:1.4rem">3D view</h3>
 <div class="v3d" id="v3d"></div>
-<div class="bar">${showChain?`<button id="bH" aria-pressed="true">Helix</button>`:""}${showSmiles3?`<button id="bS" aria-pressed="false">RDKit 3D</button>`:""}${M.pdb?`<button id="bX" aria-pressed="false">Experimental (${esc(M.pdb)})</button>`:""}</div>
+<div class="bar">${showChain?`<button id="bH" aria-pressed="true">Ribbon (helix)</button>`:""}${M.pdb?`<button id="bX" aria-pressed="false">Experimental (${esc(M.pdb)})</button>`:""}</div>
 <p class="n" id="v3dCap"></p>${can3D?`
 <p class="n">The diagrams and figures are generated from the sequence field, so every monograph is built the same way and can be checked.</p>`:""}`;
   return h;
@@ -271,12 +259,10 @@ function mono(id){
   for(const s of M.sections){if(!ins&&/^summary/i.test(s.t)){h+=S(s.t,s.h)+S("Structure and composition",structureSection(M));ins=true}else h+=S(s.t,s.h)}
   if(!ins)h=S("Structure and composition",structureSection(M))+h;
   app.innerHTML+=h+refsSection(M)+`<p class="n">${M.reviewer?`Reviewer: ${esc(M.reviewer)} · `:""}Last verified ${esc(M.verified||"not set")} · Next review due: ${esc(M.next_review||"not set")} · Version ${esc(M.version||"draft")}</p>`;
-  const bH=$("#bH"),bS=$("#bS"),bX=$("#bX");
+  const bH=$("#bH"),bX=$("#bX");
   if(bH)bH.onclick=()=>{v3mode="helix";draw3(M)};
-  if(bS)bS.onclick=()=>{v3mode="smiles";draw3(M)};
   if(bX)bX.onclick=()=>{v3mode="exp";draw3(M)};
-  if(M.sequence&&!M.cyclic)draw3(M);
-  else if(M.smiles){v3mode="smiles";draw3(M)}
+  if(M.sequence||M.trace)draw3(M);
   else if(M.pdb){v3mode="exp";draw3(M)}
   if(M.smiles||(M.sequence&&!M.nonstandard))draw2D(M);
 }

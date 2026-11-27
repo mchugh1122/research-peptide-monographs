@@ -16,5 +16,10 @@
  "reviewer": null,
  "version": "0.1 draft",
  "nonstandard": true,
- "smiles": "CCCCCC(=O)N[C@@H](CC1=CC=C(C=C1)O)C(=O)N[C@@H]([C@@H](C)CC)C(=O)NCCCCCC(=O)N"
+ "smiles": "CCCCCC(=O)N[C@@H](CC1=CC=C(C=C1)O)C(=O)N[C@@H]([C@@H](C)CC)C(=O)NCCCCCC(=O)N",
+ "trace": [
+  "TYR",
+  "ILE",
+  "AHX"
+ ]
 }

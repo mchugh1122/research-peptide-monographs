@@ -7,12 +7,20 @@
  "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": null,
  "sequence_note": null,
- "structure_note": "2D and 3D views shown from the recorded SMILES (PubChem).",
+ "structure_note": "2D structure shown from the recorded SMILES (PubChem); the 3D view is a schematic backbone ribbon.",
  "pdb": null,
  "verified": "2026-11-24",
  "next_review": null,
  "reviewer": null,
  "version": "0.1 draft",
  "nonstandard": true,
- "smiles": "CC1=C(C2=CC=CC=C2N1)C[C@H](C(=O)N[C@@H](C)C(=O)N[C@@H](CC3=CNC4=CC=CC=C43)C(=O)N[C@H](CC5=CC=CC=C5)C(=O)N[C@@H](CCCCN)C(=O)N)NC(=O)[C@H](CC6=CN=CN6)N"
+ "smiles": "CC1=C(C2=CC=CC=C2N1)C[C@H](C(=O)N[C@@H](C)C(=O)N[C@@H](CC3=CNC4=CC=CC=C43)C(=O)N[C@H](CC5=CC=CC=C5)C(=O)N[C@@H](CCCCN)C(=O)N)NC(=O)[C@H](CC6=CN=CN6)N",
+ "trace": [
+  "HIS",
+  "DMT",
+  "ALA",
+  "TRP",
+  "DPH",
+  "LYS"
+ ]
 }

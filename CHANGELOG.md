@@ -2,6 +2,10 @@
 
 ## 27 November 2026
 
+- **3D ribbons:** the 3D view is now a ribbon (cartoon) style throughout — a locally generated ideal α-helix backbone ribbon for every entry with a sequence or residue trace (including cyclic peptides, with bridges noted as not shown); residue traces added for the sequence-less peptides (melanocortins, GHRPs, gonadorelin, dermorphin, CJC-1295, elamipretide, dihexa, PNC-27, FOXO4-DRI). The RDKit 3D (ETKDG) path was removed after finding the WebAssembly build only produces 2D coordinates.
+
+## 27 November 2026
+
 - **Class F–L evidence drafts (final batch):** thymosin alpha-1, Thymalin, ARA-290, LL-37, elamipretide, MOTS-c, humanin, Epitalon, FOXO4-DRI, dermorphin, PNC-27 and teriparatide populated with DOI-backed references, completing evidence drafts for all 49 monographs. MGF gained its two key references. MOTS-c and Epitalon include the July 2026 FDA PCAC committee votes.
 - **Class E + J evidence drafts:** Semax, Selank, DSIP (emideltide), Cerebrolysin, Dihexa and P21 (neuropeptides) and gonadorelin, oxytocin and kisspeptin-10 (reproductive peptides) populated with DOI-backed, tiered references. DSIP/emideltide includes the July 2026 FDA PCAC evaluation and the 7–6 vote against 503A inclusion; Semax includes the 8–5 committee vote.
 
