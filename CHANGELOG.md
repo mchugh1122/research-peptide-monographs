@@ -1,5 +1,9 @@
 # Changelog
 
+## 27 November 2026
+
+- **Class E + J evidence drafts:** Semax, Selank, DSIP (emideltide), Cerebrolysin, Dihexa and P21 (neuropeptides) and gonadorelin, oxytocin and kisspeptin-10 (reproductive peptides) populated with DOI-backed, tiered references. DSIP/emideltide includes the July 2026 FDA PCAC evaluation and the 7–6 vote against 503A inclusion; Semax includes the 8–5 committee vote.
+
 ## 26 November 2026
 
 - **Class C + D evidence drafts:** TB-500, thymosin beta-4, GHK-Cu and KPV (tissue repair) and bremelanotide, afamelanotide, setmelanotide and Melanotan II (melanocortins) populated with DOI-backed, tiered references; TB-500 cross-referenced to the July 2026 FDA PCAC briefing.

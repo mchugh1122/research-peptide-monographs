@@ -1,2 +1,17 @@
 [
+ {
+  "doi": "10.1007/s00702-004-0248-2",
+  "tier": 1,
+  "claim": "Randomised controlled trial of Cerebrolysin in acute stroke (Ladurner et al. 2005)."
+ },
+ {
+  "doi": "10.1002/14651858.CD007026.pub7",
+  "tier": 1,
+  "claim": "Cochrane systematic review (2023): no clear benefit of Cerebrolysin for acute ischaemic stroke; quality concerns."
+ },
+ {
+  "doi": "10.7759/cureus.91054",
+  "tier": 2,
+  "claim": "2025 systematic review of Cerebrolysin for neurorecovery after acute ischaemic stroke."
+ }
 ]

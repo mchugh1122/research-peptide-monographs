@@ -1,2 +1,28 @@
 [
+ {
+  "doi": "10.1007/s11064-005-8826-8",
+  "tier": 4,
+  "claim": "Semax, an ACTH(4-10) analogue, activates dopaminergic and serotonergic brain systems in rodents."
+ },
+ {
+  "doi": "10.1016/j.npep.2020.102114",
+  "tier": 4,
+  "claim": "Semax attenuates behavioural and neurochemical alterations in a rodent ischaemia model."
+ },
+ {
+  "doi": "10.1016/j.ejphar.2024.177068",
+  "tier": 4,
+  "claim": "Antidepressant-like and antistress effects of Semax in rodent models."
+ },
+ {
+  "doi": "10.17116/jnevro20181183261-68",
+  "tier": 3,
+  "claim": "Russian clinical study of Semax in patients at different stages of ischaemic stroke (in Russian)."
+ },
+ {
+  "url": "https://www.fda.gov/media/193342/download",
+  "title": "FDA PCAC meeting briefing package (23–24 July 2026)",
+  "claim": "Semax-related bulk substances were reviewed; the committee voted 8–5 to recommend inclusion on the 503A bulks list for cerebral ischemia, migraine and trigeminal neuralgia (advisory only; final FDA action pending).",
+  "note": "regulator document"
+ }
 ]

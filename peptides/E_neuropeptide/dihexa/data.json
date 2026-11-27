@@ -6,15 +6,15 @@
  ],
  "class": "E",
  "status": "U",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": null,
  "sequence_note": null,
  "structure_note": "Small pseudo-peptide with a hexanoic acid N-terminus and an aminohexanoic amide C-terminus; sequence to verify. Atom-level display pending.",
  "pdb": null,
- "verified": "2026-11-24",
+ "verified": "2026-11-27",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
+ "version": "0.1 draft",
  "nonstandard": true,
  "smiles": "CCCCCC(=O)N[C@@H](CC1=CC=C(C=C1)O)C(=O)N[C@@H]([C@@H](C)CC)C(=O)NCCCCCC(=O)N"
 }

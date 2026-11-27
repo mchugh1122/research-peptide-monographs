@@ -1,2 +1,23 @@
 [
+ {
+  "doi": "10.1073/pnas.74.3.1282",
+  "tier": 5,
+  "claim": "Original characterisation of the delta-sleep-inducing peptide (DSIP) from rabbit cerebral venous blood."
+ },
+ {
+  "doi": "10.1016/0196-9781(86)90148-8",
+  "tier": 3,
+  "claim": "Review of DSIP evidence up to 1986."
+ },
+ {
+  "doi": "10.1111/j.1471-4159.2006.03693.x",
+  "tier": 3,
+  "claim": "2006 review: DSIP remains 'a still unresolved riddle' — inconsistent human findings."
+ },
+ {
+  "url": "https://www.fda.gov/media/193774/download",
+  "title": "FDA PCAC briefing: Emideltide (free base) and Emideltide acetate (July 2026)",
+  "claim": "FDA evaluation: substances not well characterized; no evidence of effectiveness for chronic insomnia, narcolepsy or opioid withdrawal; immunogenicity concerns. Committee voted 7–6 (1 abstention) against 503A inclusion; final FDA action pending.",
+  "note": "regulator document"
+ }
 ]
