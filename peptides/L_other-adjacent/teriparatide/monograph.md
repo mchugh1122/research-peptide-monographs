@@ -2,56 +2,57 @@
 
 ## Summary
 
-To be added. Skeleton draft — every claim will require DOI-backed references.
+Recombinant parathyroid hormone (1–34), the only anabolic osteoporosis drug of its generation when approved (2002). Included as an approved comparator: a reminder that peptide therapies can be thoroughly evidence-based. Two-year lifetime treatment limit (osteosarcoma signal in rodents).
 
 ## Mechanism of action
 
-To be added.
+**Established:** intermittent PTH-receptor agonism stimulates osteoblast activity and new bone formation (anabolic), unlike antiresorptives.
 
 ## Evidence summary
 
-| Tier | Finding |
-| --- | --- |
-| — | Not yet populated. |
+| Tier | Finding | Ref. |
+| --- | --- | --- |
+| 1 | Fracture and BMD efficacy in postmenopausal osteoporosis | [10.1056/NEJM200105103441904](https://doi.org/10.1056/NEJM200105103441904) |
 
 ## Indications and dose
 
-To be added. No dosing information is given for unapproved compounds.
+**Licensed:** osteoporosis at high fracture risk (postmenopausal, male, glucocorticoid-induced); 20 µg daily subcutaneous for up to 2 years (verify current label). Biosimilars exist.
 
 ## Important safety information and cautions
 
-To be added.
+Boxed warning: osteosarcoma in rats — lifetime use limited to 2 years; hypercalcaemia risk; not for those at increased osteosarcoma risk (Paget's, prior bone radiation).
 
 ## Contraindications
 
-To be added.
+Per label: pre-existing hypercalcaemia, severe renal impairment, increased osteosarcoma risk; verify.
 
 ## Side effects
 
-To be added.
+Nausea, dizziness, leg cramps, transient hypercalcaemia, injection-site reactions.
 
 ## Product quality
 
-To be added from independent analytical studies. Vendor certificates of analysis are never used as evidence.
+Approved products and biosimilars; pharmacopoeial standards apply.
 
 ## Handling and storage
 
-To be added.
+Follow the label; refrigerated storage.
 
 ## Regulatory and sport status
 
 | Jurisdiction | Status |
 | --- | --- |
-| — | To be verified against regulator pages. |
+| United States / EU | Approved (2002/2003; biosimilars available). |
+| Sport | Not prohibited by WADA to current knowledge (verify). |
 
 ## Notes for clinicians
 
-To be added.
+Standard osteoporosis medicine; the 2-year cap and follow-on antiresorptive sequencing are key clinical points.
 
 ## Plain-language page
 
-To be added.
+**What is it?** A bone-building injection for severe osteoporosis. **What do we know?** Strong fracture evidence over decades. **What don't we know?** Little — it is a mature, well-studied medicine. **What should I tell my doctor or pharmacist?** That you use it and the dose.
 
 ## Evidence gaps
 
-- All sections pending DOI-backed sources
+- None material; comparator entry

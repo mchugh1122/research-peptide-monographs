@@ -2,56 +2,60 @@
 
 ## Summary
 
-To be added. Skeleton draft — every claim will require DOI-backed references.
+Preparation derived from calf thymus extracts, historically used (mainly in Russia) as an immunomodulator; not a single defined peptide. Evidence is predominantly Russian-language and pre-dates modern trial standards.
 
 ## Mechanism of action
 
-To be added.
+**Proposed:** thymic extract components reported to influence T-cell maturation and immune function; a defined molecular mechanism cannot be stated for a mixed preparation.
 
 ## Evidence summary
 
-| Tier | Finding |
-| --- | --- |
-| — | Not yet populated. |
+| Tier | Finding | Ref. |
+| --- | --- | --- |
+| 3 | Composition/gene-expression study of the preparation | [10.3390/ijms241713377](https://doi.org/10.3390/ijms241713377) |
 
 ## Indications and dose
 
-To be added. No dosing information is given for unapproved compounds.
+**No Western approvals. No established dose.** Historical Russian uses are not endorsed.
 
 ## Important safety information and cautions
 
-To be added.
+Biological extract of animal origin: batch variability, theoretical transmission/immunogenicity risks; modern safety data lacking.
 
 ## Contraindications
 
-To be added.
+None established by modern standards.
 
 ## Side effects
 
-To be added.
+Poorly documented.
 
 ## Product quality
 
-To be added from independent analytical studies. Vendor certificates of analysis are never used as evidence.
+Extract preparations vary; no pharmacopoeial standard identified.
 
 ## Handling and storage
 
-To be added.
+No guidance given.
 
 ## Regulatory and sport status
 
 | Jurisdiction | Status |
 | --- | --- |
-| — | To be verified against regulator pages. |
+| Russia / former Soviet states | Historically used (verify current status). |
+| United States / EU | Not approved. |
+| Sport | Not WADA-listed to current knowledge (verify). |
 
 ## Notes for clinicians
 
-To be added.
+Document source and indication; report adverse events.
 
 ## Plain-language page
 
-To be added.
+**What is it?** A calf-thymus extract used historically for immunity. **What do we know?** Old Russian literature; no modern proof. **What don't we know?** Composition and safety by current standards. **What should I tell my doctor or pharmacist?** That you use it and where it came from.
 
 ## Evidence gaps
 
-- All sections pending DOI-backed sources
+- No modern controlled trials
+- Composition standardisation absent
+- Independent analyses of market supply pending

@@ -1,1 +1,12 @@
-[]
+[
+ {
+  "doi": "10.1016/s0014-5793(02)02918-6",
+  "tier": 4,
+  "claim": "Yang & Goldspink: the IGF-I Ec peptide (MGF) and mature IGF-I have different roles in myoblast proliferation and differentiation."
+ },
+ {
+  "doi": "10.3109/17482960903089775",
+  "tier": 3,
+  "claim": "MGF mRNA expression study in amyotrophic lateral sclerosis patients."
+ }
+]

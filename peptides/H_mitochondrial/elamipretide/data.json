@@ -7,15 +7,15 @@
  ],
  "class": "H",
  "status": "A",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": null,
  "sequence_note": null,
  "structure_note": "D-Arg-Dmt-Lys-Phe-NH2 with 2′,6′-dimethyltyrosine (Dmt) and D-amino acids; C-terminal amide. Atom-level display pending.",
  "pdb": null,
- "verified": "2026-11-24",
+ "verified": "2026-11-27",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
+ "version": "0.1 draft",
  "nonstandard": true,
  "smiles": "CC1=CC(=CC(=C1C[C@@H](C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CC2=CC=CC=C2)C(=O)N)NC(=O)[C@@H](CCCN=C(N)N)N)C)O"
 }

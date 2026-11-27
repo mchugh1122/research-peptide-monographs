@@ -2,6 +2,7 @@
 
 ## 27 November 2026
 
+- **Class F–L evidence drafts (final batch):** thymosin alpha-1, Thymalin, ARA-290, LL-37, elamipretide, MOTS-c, humanin, Epitalon, FOXO4-DRI, dermorphin, PNC-27 and teriparatide populated with DOI-backed references, completing evidence drafts for all 49 monographs. MGF gained its two key references. MOTS-c and Epitalon include the July 2026 FDA PCAC committee votes.
 - **Class E + J evidence drafts:** Semax, Selank, DSIP (emideltide), Cerebrolysin, Dihexa and P21 (neuropeptides) and gonadorelin, oxytocin and kisspeptin-10 (reproductive peptides) populated with DOI-backed, tiered references. DSIP/emideltide includes the July 2026 FDA PCAC evaluation and the 7–6 vote against 503A inclusion; Semax includes the 8–5 committee vote.
 
 ## 26 November 2026

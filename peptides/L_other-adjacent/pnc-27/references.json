@@ -1,2 +1,12 @@
 [
+ {
+  "doi": "10.1007/s00280-009-1166-7",
+  "tier": 5,
+  "claim": "PNC-27 induces tumour cell lysis as the intact peptide (in vitro)."
+ },
+ {
+  "doi": "10.3390/biomedicines10050945",
+  "tier": 5,
+  "claim": "PNC-27 binds HDM-2 in a p53-peptide-like structure and induces cancer-cell death in vitro."
+ }
 ]

@@ -12,7 +12,7 @@ Mechano growth factor (MGF) is a C-terminal splice-variant peptide of IGF-1 (IGF
 
 | Tier | Finding |
 | --- | --- |
-| — | Key animal studies exist (Yang & Goldspink); DOIs to be entered and graded. |
+| 4 | IGF-I Ec peptide (MGF) roles in myoblast proliferation/differentiation (Yang & Goldspink) | [10.1016/s0014-5793(02)02918-6](https://doi.org/10.1016/s0014-5793(02)02918-6) |
 
 ## Indications and dose
 
@@ -55,4 +55,4 @@ Document source, dose and injection practice; report adverse events.
 
 ## Evidence gaps
 
-- All sections pending DOI-backed sources
+- No human trials; no pharmacokinetic data; independent analyses of market supply pending

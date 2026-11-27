@@ -1,2 +1,18 @@
 [
+ {
+  "doi": "10.1016/j.cmet.2015.02.009",
+  "tier": 4,
+  "claim": "Discovery: MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance in mice."
+ },
+ {
+  "doi": "10.3389/fendo.2023.1120533",
+  "tier": 2,
+  "claim": "Review of MOTS-c therapeutic potential."
+ },
+ {
+  "url": "https://www.fda.gov/media/193342/download",
+  "title": "FDA PCAC meeting briefing package (23–24 July 2026)",
+  "claim": "MOTS-c-related bulk substances were reviewed; the committee voted to recommend 503A inclusion (advisory only; final FDA action pending).",
+  "note": "regulator document"
+ }
 ]

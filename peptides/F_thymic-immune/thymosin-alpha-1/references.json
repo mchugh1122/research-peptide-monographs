@@ -1,2 +1,17 @@
 [
+ {
+  "doi": "10.1093/ajhp/58.10.886",
+  "tier": 2,
+  "claim": "Drug review of thymosin alpha-1 (2001)."
+ },
+ {
+  "doi": "10.1136/gut.39.5.679",
+  "tier": 1,
+  "claim": "Combination thymosin alpha-1 and lymphoblastoid interferon in chronic hepatitis C."
+ },
+ {
+  "doi": "10.1111/j.1749-6632.2010.05460.x",
+  "tier": 2,
+  "claim": "Review of thymosin alpha-1 in hepatitis C: promise and proof."
+ }
 ]

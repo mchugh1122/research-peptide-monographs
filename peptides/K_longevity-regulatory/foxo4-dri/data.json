@@ -4,15 +4,15 @@
  "aliases": [],
  "class": "K",
  "status": "U",
- "status_note": "Skeleton draft — content not yet populated. Not reviewed. Claims pending DOI-backed references.",
+ "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": null,
  "sequence_note": null,
  "structure_note": "D-retro-inverso 46-mer (all-D amino acids, reversed sequence); sequence to verify. Atom-level display pending.",
  "pdb": null,
- "verified": "2026-11-24",
+ "verified": "2026-11-27",
  "next_review": null,
  "reviewer": null,
- "version": "0.1 skeleton",
+ "version": "0.1 draft",
  "nonstandard": true,
  "smiles": "CC[C@@H](C)[C@H](C(=O)N[C@H](C)C(=O)N[C@H](CCC(=O)N)C(=O)N[C@H](CO)C(=O)N[C@H]([C@H](C)CC)C(=O)N[C@H](CC(C)C)C(=O)N[C@H](CCC(=O)O)C(=O)N[C@H](C)C(=O)N[C@H](CC1=CC=C(C=C1)O)C(=O)N[C@H](CO)C(=O)N[C@H](CCC(=O)N)C(=O)N[C@H](CC(=O)N)C(=O)NCC(=O)N[C@H](CC2=CNC3=CC=CC=C32)C(=O)N[C@H](C)C(=O)N[C@H](CC(=O)N)C(=O)N[C@H](CCCNC(=N)N)C(=O)N[C@H](CCCNC(=N)N)C(=O)N[C@H](CO)C(=O)NCC(=O)NCC(=O)N[C@H](CCCCN)C(=O)N[C@H](CCCNC(=N)N)C(=O)N4CCC[C@@H]4C(=O)N5CCC[C@@H]5C(=O)N6CCC[C@@H]6C(=O)N[C@H](CCCNC(=N)N)C(=O)N[C@H](CCCNC(=N)N)C(=O)N[C@H](CCCNC(=N)N)C(=O)N[C@H](CCC(=O)N)C(=O)N[C@H](CCCNC(=N)N)C(=O)N[C@H](CCCNC(=N)N)C(=O)N[C@H](CCCCN)C(=O)N[C@H](CCCCN)C(=O)N[C@H](CCCNC(=N)N)C(=O)NCC(=O)O)NC(=O)[C@@H](CCC(=O)O)NC(=O)[C@@H](CO)NC(=O)[C@@H](C)NC(=O)[C@H]7CCCN7C(=O)[C@@H](CCC(=O)O)NC(=O)[C@@H](CCCCN)NC(=O)[C@@H](CCCNC(=N)N)NC(=O)[C@@H](CC(C)C)NC(=O)[C@@H]([C@H](C)O)NC(=O)[C@@H](CC(C)C)N"
 }

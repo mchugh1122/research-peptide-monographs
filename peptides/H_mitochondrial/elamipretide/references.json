@@ -1,2 +1,17 @@
 [
+ {
+  "doi": "10.1186/s13023-022-02469-5",
+  "tier": 1,
+  "claim": "Natural-history comparison supporting elamipretide's efficacy in Barth syndrome."
+ },
+ {
+  "doi": "10.1016/j.gim.2024.101138",
+  "tier": 1,
+  "claim": "168-week open-label extension: long-term efficacy and safety in Barth syndrome."
+ },
+ {
+  "doi": "10.1212/WNL.0000000000207402",
+  "tier": 1,
+  "claim": "MMPOWER-3: phase 3 in primary mitochondrial myopathy (did not meet its primary endpoint)."
+ }
 ]
