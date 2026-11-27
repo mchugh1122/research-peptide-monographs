@@ -22,7 +22,15 @@ Synthetic 15-residue peptide (Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gl
 
 ## Indications and dose
 
-**No licensed indications. No established dose.** Human administrations documented in the FDA briefing (study conditions only): up to 2 mg/kg rectal enema daily × 8 days; 80 mg enema daily × 2 weeks (UC); 2–4 mg intra-articular (knee pain); 10 mg intravesical (interstitial cystitis); 10–20 mg IV (healthy subjects). These are not recommendations.
+**No licensed indications. No established dose.** The human administrations documented in the FDA briefing are study conditions, not recommendations:
+
+| Population | Route | Dose as published | Duration | Ref. |
+| --- | --- | --- | --- | --- |
+| Healthy subjects (n=24) | Rectal enema | 2 mg/kg once daily | 8 days | [FDA briefing](https://www.fda.gov/media/193773/download) |
+| Ulcerative colitis (n≈26) | Rectal enema | 80 mg once daily | 2 weeks | [FDA briefing](https://www.fda.gov/media/193773/download) |
+| Knee pain (n=17) | Intra-articular | 2–4 mg, 1–2 doses | Single | [FDA briefing](https://www.fda.gov/media/193773/download) |
+| Interstitial cystitis (n=12) | Intravesical | 10 mg, single procedure | Single | [FDA briefing](https://www.fda.gov/media/193773/download) |
+| Healthy subjects (n=2) | Intravenous | 10 mg day 1, then 20 mg day 2 | 2 days | [FDA briefing](https://www.fda.gov/media/193773/download) |
 
 ## Important safety information and cautions
 
@@ -52,7 +60,7 @@ No validated stability data entered. Reconstitution and administration instructi
 | --- | --- |
 | United States | Unapproved. Removed from FDA compounding Category 2 in April 2026 after nominations were withdrawn. At the 23–24 July 2026 PCAC meeting, FDA staff proposed against adding BPC-157 to the 503A bulks list; the committee voted 8–6 (1 abstention) to recommend inclusion. Final FDA action not confirmed. |
 | Sport | WADA: listed under non-approved substances (S0), per the FDA briefing. |
-| EU, UK, Ireland, Canada, Australia | Not yet populated. |
+| EU, UK, Ireland, Canada, Australia | Not approved; no marketing authorisation identified (verify national registers). |
 
 ## Notes for clinicians
 

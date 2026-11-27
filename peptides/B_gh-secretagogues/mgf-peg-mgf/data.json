@@ -8,7 +8,7 @@
  "status": "U",
  "status_note": "Monograph draft, not yet reviewed. Status verified from secondary sources.",
  "sequence": "YQPPSTNKNTKSQRRKGSTFEEHK",
- "sequence_note": "From secondary sources; to verify against a primary or regulatory reference.",
+ "sequence_note": "The 24-residue sequence shown is the rat IGF-1Ec E-domain peptide (commonly called MGF); the human IGF-1 E-peptide differs (longer C-terminus; UniProt P05019).",
  "structure_note": "IGF-1Ec C-terminal peptide; the PEG-MGF form carries polyethylene glycol (not depicted).",
  "pdb": null,
  "verified": "2026-11-24",

@@ -57,5 +57,5 @@ Exenatide remains a useful comparator and historical anchor: it established the 
 
 ## Evidence gaps
 
-- No dedicated cardiovascular-outcomes superiority finding (EXSCEL was neutral; to be added with DOI)
+- EXSCEL showed noninferiority, not superiority, for cardiovascular outcomes
 - Comparative data with newer GLP-1 agents largely superseded in practice

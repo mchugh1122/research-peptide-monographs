@@ -1,5 +1,11 @@
 # Changelog
 
+## 28 November 2026
+
+- **Print stylesheet** added: monographs print as clean black-on-white sheets (nav, buttons and search hidden; boxes and tables bordered; page-break handling); a Print button on each monograph.
+- **Monograph search:** the index search now also searches monograph text and references, showing a "Monograph matches" box with snippets.
+- **Gap-fill:** BPC-157 dose table populated from the FDA briefing study conditions; EU/CA/AU regulatory rows made concrete; exenatide gained the EXSCEL DOI; AOD-9604 and LL-37 registry notes flagged for verification; MGF sequence note corrected — the 24-mer is the rat IGF-1Ec E-peptide, the human one is longer (UniProt P05019).
+
 ## 27 November 2026
 
 - **3D ribbons:** the 3D view is now a ribbon (cartoon) style throughout — a locally generated ideal α-helix backbone ribbon for every entry with a sequence or residue trace (including cyclic peptides, with bridges noted as not shown); residue traces added for the sequence-less peptides (melanocortins, GHRPs, gonadorelin, dermorphin, CJC-1295, elamipretide, dihexa, PNC-27, FOXO4-DRI). The RDKit 3D (ETKDG) path was removed after finding the WebAssembly build only produces 2D coordinates.

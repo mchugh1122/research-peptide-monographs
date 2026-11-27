@@ -2,7 +2,7 @@
 
 ## Summary
 
-Mechano growth factor (MGF) is a C-terminal splice-variant peptide of IGF-1 (IGF-1Ec) implicated in muscle repair after mechanical load; the sequence shown is the 24-residue E-peptide with a C-terminal amide. PEG-MGF is a polyethylene-glycol-conjugated form claimed to have longer half-life. Neither has an approved product.
+Mechano growth factor (MGF) is a C-terminal splice-variant peptide of IGF-1 (IGF-1Ec) implicated in muscle repair after mechanical load. The 24-residue sequence commonly sold as MGF is the **rat** IGF-1Ec E-peptide; the human counterpart is longer (UniProt P05019). PEG-MGF is a polyethylene-glycol-conjugated form claimed to have longer half-life. Neither has an approved product.
 
 ## Mechanism of action
 
